@@ -1,17 +1,16 @@
 use strict;
 use warnings;
 
-package AttributeIndexes;
+package MooseX::AttributeIndexes;
 
 # ABSTRACT: Advertise metadata about your Model-Representing Classes to Any Database tool.
+use Moose ();
 
 use Moose::Exporter;
 use Moose::Util::MetaRole;
 use MooseX::AttributeIndexes::Provider;
 use MooseX::AttributeIndexes::Provider::FromAttributes;
 use MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed;
-
-use namespace::autoclean;
 
 =head1 SYNOPSIS
 
@@ -67,23 +66,31 @@ use namespace::autoclean;
 
 =cut
 
-Moose::Exporter->setup_import_methods;
+Moose::Exporter->setup_import_methods();
+
+=head1 METHODS
+
+=head2 init_meta
+
+Injects the traits for Indexed as default traits on all new attributes,
+and glues the 2 magical roles into your package.
+
+=cut
 
 sub init_meta {
   my ( $class, %options ) = @_;
-  Moose::Util::MetaRole::apply_metaclass_roles (
-    for_class => $options{'for_class'},
-    attribute_metaclass_roles => [qw( Indexed )],
-  );
-  Moose::Util::MetaRole::apply_base_class_roles (
-    for_class => $options{'for_class'},
-    roles => [
-      'MooseX::AttributeIndexes::Provider',
-      'MooseX::AttributeIndexes::Provider::FromAttributes',
-    ],
-  )
-}
+  Moose->init_meta( for_class => $options{'for_class'} )
+    unless $options{'for_class'}->can('meta');
 
+  Moose::Util::MetaRole::apply_metaclass_roles(
+    for_class                 => $options{'for_class'},
+    attribute_metaclass_roles => [ 'MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed' ],
+  );
+  Moose::Util::MetaRole::apply_base_class_roles(
+    for_class => $options{'for_class'},
+    roles     => [ 'MooseX::AttributeIndexes::Provider', 'MooseX::AttributeIndexes::Provider::FromAttributes', ],
+  );
+}
 
 1;
 

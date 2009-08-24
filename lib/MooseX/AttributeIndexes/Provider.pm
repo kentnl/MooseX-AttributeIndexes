@@ -1,10 +1,10 @@
+use strict;
+use warnings;
 package MooseX::AttributeIndexes::Provider;
 
 # ABSTRACT: A role that advertises an object is capable of providing metadata.
 
 # $Id:$
-use strict;
-use warnings;
 use Moose::Role;
 use namespace::autoclean;
 
