@@ -78,8 +78,8 @@ sub init_meta {
   Moose::Util::MetaRole::apply_base_class_roles (
     for_class => $options{'for_class'},
     roles => [
-      'MooseX::AttributeIndexes::Provider'
-      'MooseX::AttributeIndexes::Provider::FromAttributes'
+      'MooseX::AttributeIndexes::Provider',
+      'MooseX::AttributeIndexes::Provider::FromAttributes',
     ],
   )
 }
