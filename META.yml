@@ -1,0 +1,34 @@
+---
+abstract: 'Advertise metadata about your Model-Representing Classes to Any Database tool.'
+author:
+  - 'Kent Fredric <kentnl@cpan.org>'
+generated_by: 'Dist::Zilla::Plugin::MetaYAML version 1.092310'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: MooseX-AttributeIndexes
+provides:
+  Moose::Meta::Attribute::Custom::Trait::Indexed:
+    file: lib/Moose/Meta/Attribute/Custom/Trait/Indexed.pm
+    version: 0.01000300
+  MooseX::AttributeIndexes:
+    file: lib/MooseX/AttributeIndexes.pm
+    version: 0.01000300
+  MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed:
+    file: lib/MooseX/AttributeIndexes/Meta/Attribute/Trait/Indexed.pm
+    version: 0.01000300
+  MooseX::AttributeIndexes::Provider:
+    file: lib/MooseX/AttributeIndexes/Provider.pm
+    version: 0.01000300
+  MooseX::AttributeIndexes::Provider::FromAttributes:
+    file: lib/MooseX/AttributeIndexes/Provider/FromAttributes.pm
+    version: 0.01000300
+requires:
+  Moose: 0.89
+  MooseX::Types::Moose: 0
+  Test::More: 0.92
+  namespace::autoclean: 0.08
+resources:
+  repository: http://github.com/kentfredric/MooseX-AttributeIndexes
+version: 0.01000300

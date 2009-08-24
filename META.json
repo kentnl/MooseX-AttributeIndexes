@@ -1,0 +1,45 @@
+{
+   "resources" : {
+      "repository" : "http://github.com/kentfredric/MooseX-AttributeIndexes"
+   },
+   "generated_by" : "Dist::Zilla::Plugin::MetaJSON version 1.092310",
+   "meta-spec" : {
+      "version" : 1.4,
+      "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
+   },
+   "version" : "0.01000300",
+   "name" : "MooseX-AttributeIndexes",
+   "author" : [
+      "Kent Fredric <kentnl@cpan.org>"
+   ],
+   "license" : "perl",
+   "provides" : {
+      "Moose::Meta::Attribute::Custom::Trait::Indexed" : {
+         "version" : "0.01000300",
+         "file" : "lib/Moose/Meta/Attribute/Custom/Trait/Indexed.pm"
+      },
+      "MooseX::AttributeIndexes::Provider::FromAttributes" : {
+         "version" : "0.01000300",
+         "file" : "lib/MooseX/AttributeIndexes/Provider/FromAttributes.pm"
+      },
+      "MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed" : {
+         "version" : "0.01000300",
+         "file" : "lib/MooseX/AttributeIndexes/Meta/Attribute/Trait/Indexed.pm"
+      },
+      "MooseX::AttributeIndexes" : {
+         "version" : "0.01000300",
+         "file" : "lib/MooseX/AttributeIndexes.pm"
+      },
+      "MooseX::AttributeIndexes::Provider" : {
+         "version" : "0.01000300",
+         "file" : "lib/MooseX/AttributeIndexes/Provider.pm"
+      }
+   },
+   "requires" : {
+      "Test::More" : "0.92",
+      "MooseX::Types::Moose" : "0",
+      "namespace::autoclean" : "0.08",
+      "Moose" : "0.89"
+   },
+   "abstract" : "Advertise metadata about your Model-Representing Classes to Any Database tool."
+}
