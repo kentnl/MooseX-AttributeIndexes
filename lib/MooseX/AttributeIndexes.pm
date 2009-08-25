@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 package MooseX::AttributeIndexes;
-our $VERSION = '0.01000300';
+our $VERSION = '0.01000404';
 
 
 # ABSTRACT: Advertise metadata about your Model-Representing Classes to Any Database tool.
@@ -15,6 +15,7 @@ use MooseX::AttributeIndexes::Provider::FromAttributes;
 use MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed;
 
 
+
 Moose::Exporter->setup_import_methods();
 
 
@@ -25,7 +26,7 @@ sub init_meta {
 
   Moose::Util::MetaRole::apply_metaclass_roles(
     for_class                 => $options{'for_class'},
-    attribute_metaclass_roles => [ 'MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed' ],
+    attribute_metaclass_roles => ['MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed'],
   );
   Moose::Util::MetaRole::apply_base_class_roles(
     for_class => $options{'for_class'},
@@ -46,7 +47,7 @@ MooseX::AttributeIndexes - Advertise metadata about your Model-Representing Clas
 
 =head1 VERSION
 
-version 0.01000300
+version 0.01000404
 
 =head1 SYNOPSIS
 
@@ -99,6 +100,12 @@ version 0.01000300
       }
     }
   );
+
+
+
+=head3 SEE ALSO
+
+L<Search::GIN::Extract::AttributeIndexes>
 
 
 
