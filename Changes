@@ -1,5 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+          Depend Resolution Fixup
+
+0.01000300 2009-08-24 12:06:14 UTC
           First version.
 
