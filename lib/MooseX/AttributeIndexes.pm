@@ -66,6 +66,12 @@ use MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed;
 
 =cut
 
+=head3 SEE ALSO
+
+L<Search::GIN::Extract::AttributeIndexes>
+
+=cut
+
 Moose::Exporter->setup_import_methods();
 
 =head1 METHODS
@@ -84,7 +90,7 @@ sub init_meta {
 
   Moose::Util::MetaRole::apply_metaclass_roles(
     for_class                 => $options{'for_class'},
-    attribute_metaclass_roles => [ 'MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed' ],
+    attribute_metaclass_roles => ['MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed'],
   );
   Moose::Util::MetaRole::apply_base_class_roles(
     for_class => $options{'for_class'},
