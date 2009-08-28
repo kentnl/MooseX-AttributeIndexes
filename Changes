@@ -1,5 +1,9 @@
 Revision history for MooseX-AttributeIndexes
 
+0.01000613 2009-08-28 01:55:48 UTC
+          Ramped up deps to hopefully solve
+           weird Mx::Types Carp::Clan failure.
+
 0.01000404 2009-08-25 16:18:59 UTC
           Depend Resolution Fixup
           See-Also doc, 

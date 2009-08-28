@@ -11,25 +11,26 @@ name: MooseX-AttributeIndexes
 provides:
   Moose::Meta::Attribute::Custom::Trait::Indexed:
     file: lib/Moose/Meta/Attribute/Custom/Trait/Indexed.pm
-    version: 0.01000404
+    version: 0.01000613
   MooseX::AttributeIndexes:
     file: lib/MooseX/AttributeIndexes.pm
-    version: 0.01000404
+    version: 0.01000613
   MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed:
     file: lib/MooseX/AttributeIndexes/Meta/Attribute/Trait/Indexed.pm
-    version: 0.01000404
+    version: 0.01000613
   MooseX::AttributeIndexes::Provider:
     file: lib/MooseX/AttributeIndexes/Provider.pm
-    version: 0.01000404
+    version: 0.01000613
   MooseX::AttributeIndexes::Provider::FromAttributes:
     file: lib/MooseX/AttributeIndexes/Provider/FromAttributes.pm
-    version: 0.01000404
+    version: 0.01000613
 requires:
-  Data::Dump: 0
+  Data::Dump: 1.15
   Moose: 0.89
-  MooseX::Types::Moose: 0
+  MooseX::Types: 0.19
+  MooseX::Types::Moose: 0.19
   Test::More: 0.92
   namespace::autoclean: 0.08
 resources:
   repository: http://github.com/kentfredric/MooseX-AttributeIndexes
-version: 0.01000404
+version: 0.01000613

@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 package MooseX::AttributeIndexes;
-our $VERSION = '0.01000404';
+our $VERSION = '0.01000613';
 
 
 # ABSTRACT: Advertise metadata about your Model-Representing Classes to Any Database tool.
@@ -47,7 +47,7 @@ MooseX::AttributeIndexes - Advertise metadata about your Model-Representing Clas
 
 =head1 VERSION
 
-version 0.01000404
+version 0.01000613
 
 =head1 SYNOPSIS
 

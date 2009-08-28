@@ -13,10 +13,11 @@ my $build = Module::Build->new(
 "Kent\ Fredric\ \<kentnl\@cpan\.org\>",
   ],
   requires      => {
+    "MooseX::Types::Moose" => '0.19',
     "Test::More" => '0.92',
-    "MooseX::Types::Moose" => '0',
     "namespace::autoclean" => '0.08',
-    "Data::Dump" => '0',
+    "MooseX::Types" => '0.19',
+    "Data::Dump" => '1.15',
     "Moose" => '0.89',
   },
   script_files => [ qw() ],

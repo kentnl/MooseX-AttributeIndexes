@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 package MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed;
-our $VERSION = '0.01000404';
+our $VERSION = '0.01000613';
 
 
 # ABSTRACT: A Trait for attributes which permits various indexing tunables
@@ -41,7 +41,7 @@ MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed - A Trait for attribut
 
 =head1 VERSION
 
-version 0.01000404
+version 0.01000613
 
 =head1 ATTRIBUTES
 

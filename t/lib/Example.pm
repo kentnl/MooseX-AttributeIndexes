@@ -1,5 +1,5 @@
 package Example;
-our $VERSION = '0.01000404';
+our $VERSION = '0.01000613';
 
 
 # $Id:$
