@@ -66,6 +66,23 @@ use MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed;
 
 =cut
 
+=head2 CODERef
+
+Since 0.01001007, the following notation is also supported:
+
+  has 'name' => (
+    ...
+    indexed => sub {
+      my ( $attribute_meta, $object, $value ) = @_;
+      return "$_" ; # $_ == $value
+    }
+  );
+
+Noting of course, $value is populated by the meta-accessor.
+
+This is a simple way to add exceptions for weird cases for things you want to index that
+don't behave like they should.
+
 =head3 SEE ALSO
 
 L<Search::GIN::Extract::AttributeIndexes>
