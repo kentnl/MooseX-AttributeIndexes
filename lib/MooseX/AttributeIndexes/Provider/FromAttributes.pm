@@ -1,13 +1,14 @@
 use strict;
 use warnings;
 package MooseX::AttributeIndexes::Provider::FromAttributes;
-our $VERSION = '0.01000613';
+our $VERSION = '0.01001007';
 
 
 # ABSTRACT: A Glue-on-role that provides attribute_indexes data to a class via harvesting attribute traits
 
 # $Id:$
 use Moose::Role;
+use Scalar::Util qw( blessed reftype );
 use namespace::autoclean;
 
 
@@ -23,8 +24,18 @@ sub attribute_indexes {
     my $attr = $map->{$attr_name};
 
     if( $attr->does( 'MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed' ) ) {
-      if( $attr->indexed || $attr->primary_index ){
-        $k->{$attr_name} = $attr->get_value($self);
+      my $indexed = $attr->primary_index;
+      $indexed ||= $attr->indexed;
+      my $result;
+      if( $indexed ){
+        $result = $attr->get_value($self);
+      }
+      if( not blessed($indexed) and defined reftype( $indexed ) and reftype( $indexed ) eq 'CODE' ){
+        local $_ = $result;
+        $result = $attr->$indexed( $self, $result );
+      }
+      if ( $result ){
+        $k->{$attr_name} = $result;
       }
     }
   }
@@ -43,7 +54,7 @@ MooseX::AttributeIndexes::Provider::FromAttributes - A Glue-on-role that provide
 
 =head1 VERSION
 
-version 0.01000613
+version 0.01001007
 
 =head1 METHODS
 

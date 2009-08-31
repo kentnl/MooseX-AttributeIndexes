@@ -3,7 +3,7 @@ NAME
     Model-Representing Classes to Any Database tool.
 
 VERSION
-    version 0.01000613
+    version 0.01001007
 
 SYNOPSIS
   Implementing Indexes
@@ -52,6 +52,22 @@ SYNOPSIS
           }
         }
       );
+
+  CODERef
+    Since 0.01001007, the following notation is also supported:
+
+      has 'name' => (
+        ...
+        indexed => sub {
+          my ( $attribute_meta, $object, $value ) = @_;
+          return "$_" ; # $_ == $value
+        }
+      );
+
+    Noting of course, $value is populated by the meta-accessor.
+
+    This is a simple way to add exceptions for weird cases for things you
+    want to index that don't behave like they should.
 
    SEE ALSO
     Search::GIN::Extract::AttributeIndexes

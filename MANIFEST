@@ -14,9 +14,11 @@ lib/MooseX/AttributeIndexes/Provider/FromAttributes.pm
 perlcriticrc
 t/01-load.t
 t/02-basic.t
+t/03-callback.t
 t/author-critic.t
 t/author-kwalitee.t
 t/lib/Example.pm
+t/lib/Example2.pm
 t/release-meta-yaml.t
 t/release-pod-coverage.t
 t/release-pod-syntax.t

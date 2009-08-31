@@ -1,4 +1,4 @@
-package Example;
+package Example2;
 our $VERSION = '0.01001007';
 
 
@@ -11,14 +11,14 @@ has 'foo_indexed' => (
   isa => 'Str',
   required => 1,
   is => 'rw',
-  indexed => 1,
+  indexed => sub { return "${_}2"},
 );
 
 has 'foo_primary' => (
   isa => 'Str',
   required => 1,
   is => 'rw',
-  primary_index => 1,
+  primary_index => sub { return "${_}2" },
 );
 
 has 'foo_nothing' => (

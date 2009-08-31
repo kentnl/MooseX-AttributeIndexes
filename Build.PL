@@ -13,8 +13,9 @@ my $build = Module::Build->new(
 "Kent\ Fredric\ \<kentnl\@cpan\.org\>",
   ],
   requires      => {
-    "MooseX::Types::Moose" => '0.19',
     "Test::More" => '0.92',
+    "MooseX::Types::Moose" => '0.19',
+    "Scalar::Util" => '1.21',
     "namespace::autoclean" => '0.08',
     "MooseX::Types" => '0.19',
     "Data::Dump" => '1.15',

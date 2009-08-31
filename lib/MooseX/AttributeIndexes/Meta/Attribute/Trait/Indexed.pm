@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 package MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed;
-our $VERSION = '0.01000613';
+our $VERSION = '0.01001007';
 
 
 # ABSTRACT: A Trait for attributes which permits various indexing tunables
@@ -15,7 +15,7 @@ use namespace::autoclean;
 
 has 'indexed' => (
   is       => 'ro',
-  isa      => Bool,
+  isa      => Bool | CodeRef,
   required => 1,
   default  => 0,
 );
@@ -23,7 +23,7 @@ has 'indexed' => (
 
 has 'primary_index' => (
   is       => 'ro',
-  isa      => Bool,
+  isa      => Bool | CodeRef,
   required => 1,
   default  => 0,
 );
@@ -41,7 +41,7 @@ MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed - A Trait for attribut
 
 =head1 VERSION
 
-version 0.01000613
+version 0.01001007
 
 =head1 ATTRIBUTES
 
@@ -49,11 +49,15 @@ version 0.01000613
 
 Bool. 0 = This attribute is not/cannot indexed, 1 = This Attribute is/can-be indexed.
 
+CodeRef.  sub{ my( $attribute_meta, $object, $attribute_value ) = @_;  .... return }
+
 
 
 =head2 primary_index
 
 Bool. 0 = This attribute is not a primary index, 1 = This Attribute is a primary index.
+
+CodeRef.  sub{ my( $attribute_meta, $object, $attribute_value ) = @_;  .... return }
 
 
 
