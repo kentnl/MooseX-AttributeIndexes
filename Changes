@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+          Documented that feature.
           Added support for per-attribute callback processors
 
 0.01000613 2009-08-28 01:55:48 UTC
