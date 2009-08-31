@@ -6,6 +6,7 @@ package MooseX::AttributeIndexes::Provider::FromAttributes;
 
 # $Id:$
 use Moose::Role;
+use Scalar::Util qw( blessed reftype );
 use namespace::autoclean;
 
 =head1 METHODS
@@ -32,8 +33,18 @@ sub attribute_indexes {
     my $attr = $map->{$attr_name};
 
     if( $attr->does( 'MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed' ) ) {
-      if( $attr->indexed || $attr->primary_index ){
-        $k->{$attr_name} = $attr->get_value($self);
+      my $indexed = $attr->primary_index;
+      $indexed ||= $attr->indexed;
+      my $result;
+      if( $indexed ){
+        $result = $attr->get_value($self);
+      }
+      if( not blessed($indexed) and defined reftype( $indexed ) and reftype( $indexed ) eq 'CODE' ){
+        local $_ = $result;
+        $result = $attr->$indexed( $self, $result );
+      }
+      if ( $result ){
+        $k->{$attr_name} = $result;
       }
     }
   }

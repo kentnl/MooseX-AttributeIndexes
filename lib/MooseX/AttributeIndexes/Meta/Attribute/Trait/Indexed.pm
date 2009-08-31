@@ -16,11 +16,13 @@ use namespace::autoclean;
 
 Bool. 0 = This attribute is not/cannot indexed, 1 = This Attribute is/can-be indexed.
 
+CodeRef.  sub{ my( $attribute_meta, $object, $attribute_value ) = @_;  .... return }
+
 =cut
 
 has 'indexed' => (
   is       => 'ro',
-  isa      => Bool,
+  isa      => Bool | CodeRef,
   required => 1,
   default  => 0,
 );
@@ -29,11 +31,13 @@ has 'indexed' => (
 
 Bool. 0 = This attribute is not a primary index, 1 = This Attribute is a primary index.
 
+CodeRef.  sub{ my( $attribute_meta, $object, $attribute_value ) = @_;  .... return }
+
 =cut
 
 has 'primary_index' => (
   is       => 'ro',
-  isa      => Bool,
+  isa      => Bool | CodeRef,
   required => 1,
   default  => 0,
 );

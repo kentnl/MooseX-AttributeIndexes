@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+          Added support for per-attribute callback processors
+
+0.01000613 2009-08-28 01:55:48 UTC
           Ramped up deps to hopefully solve
            weird Mx::Types Carp::Clan failure.
 
