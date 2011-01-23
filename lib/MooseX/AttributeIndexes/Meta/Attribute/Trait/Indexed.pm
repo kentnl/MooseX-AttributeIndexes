@@ -1,16 +1,17 @@
 use strict;
 use warnings;
 package MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed;
-our $VERSION = '0.01001007';
-
+BEGIN {
+  $MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed::VERSION = '1.0.0';
+}
 
 # ABSTRACT: A Trait for attributes which permits various indexing tunables
 
 # $Id:$
 use Moose::Role;
 use Moose::Meta::Attribute::Custom::Trait::Indexed;
-use MooseX::Types::Moose qw(:all);
-use namespace::autoclean;
+use MooseX::Types::Moose 0.19 qw(:all);
+use namespace::autoclean 0.08;
 
 
 has 'indexed' => (
@@ -32,7 +33,6 @@ has 'primary_index' => (
 
 
 __END__
-
 =pod
 
 =head1 NAME
@@ -41,7 +41,7 @@ MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed - A Trait for attribut
 
 =head1 VERSION
 
-version 0.01001007
+version 1.0.0
 
 =head1 ATTRIBUTES
 
@@ -51,27 +51,22 @@ Bool. 0 = This attribute is not/cannot indexed, 1 = This Attribute is/can-be ind
 
 CodeRef.  sub{ my( $attribute_meta, $object, $attribute_value ) = @_;  .... return }
 
-
-
 =head2 primary_index
 
 Bool. 0 = This attribute is not a primary index, 1 = This Attribute is a primary index.
 
 CodeRef.  sub{ my( $attribute_meta, $object, $attribute_value ) = @_;  .... return }
 
-
-
 =head1 AUTHOR
 
-  Kent Fredric <kentnl@cpan.org>
+Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2009 by Kent Fredric.
+This software is copyright (c) 2011 by Kent Fredric.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
-=cut 
-
+=cut
 

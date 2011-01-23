@@ -1,6 +1,4 @@
 package Example2;
-our $VERSION = '0.01001007';
-
 
 # $Id:$
 use Moose;

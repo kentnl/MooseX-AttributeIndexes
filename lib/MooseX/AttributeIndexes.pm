@@ -2,11 +2,12 @@ use strict;
 use warnings;
 
 package MooseX::AttributeIndexes;
-our $VERSION = '0.01001007';
-
+BEGIN {
+  $MooseX::AttributeIndexes::VERSION = '1.0.0';
+}
 
 # ABSTRACT: Advertise metadata about your Model-Representing Classes to Any Database tool.
-use Moose ();
+use Moose 0.94 ();
 
 use Moose::Exporter;
 use Moose::Util::MetaRole;
@@ -24,13 +25,13 @@ sub init_meta {
   Moose->init_meta( for_class => $options{'for_class'} )
     unless $options{'for_class'}->can('meta');
 
-  Moose::Util::MetaRole::apply_metaclass_roles(
-    for_class                 => $options{'for_class'},
-    attribute_metaclass_roles => ['MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed'],
+  Moose::Util::MetaRole::apply_metaroles(
+    for             => $options{'for_class'},
+    class_metaroles => { attribute => ['MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed'], },
   );
   Moose::Util::MetaRole::apply_base_class_roles(
-    for_class => $options{'for_class'},
-    roles     => [ 'MooseX::AttributeIndexes::Provider', 'MooseX::AttributeIndexes::Provider::FromAttributes', ],
+    for   => $options{'for_class'},
+    roles => [ 'MooseX::AttributeIndexes::Provider', 'MooseX::AttributeIndexes::Provider::FromAttributes', ],
   );
 }
 
@@ -38,7 +39,6 @@ sub init_meta {
 
 
 __END__
-
 =pod
 
 =head1 NAME
@@ -47,7 +47,7 @@ MooseX::AttributeIndexes - Advertise metadata about your Model-Representing Clas
 
 =head1 VERSION
 
-version 0.01001007
+version 1.0.0
 
 =head1 SYNOPSIS
 
@@ -101,8 +101,6 @@ version 0.01001007
     }
   );
 
-
-
 =head2 CODERef
 
 Since 0.01001007, the following notation is also supported:
@@ -124,8 +122,6 @@ don't behave like they should.
 
 L<Search::GIN::Extract::AttributeIndexes>
 
-
-
 =head1 METHODS
 
 =head2 init_meta
@@ -133,19 +129,16 @@ L<Search::GIN::Extract::AttributeIndexes>
 Injects the traits for Indexed as default traits on all new attributes,
 and glues the 2 magical roles into your package.
 
-
-
 =head1 AUTHOR
 
-  Kent Fredric <kentnl@cpan.org>
+Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2009 by Kent Fredric.
+This software is copyright (c) 2011 by Kent Fredric.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
-=cut 
-
+=cut
 

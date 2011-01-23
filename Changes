@@ -1,5 +1,15 @@
 Revision history for MooseX-AttributeIndexes
 
+1.0.0     2011-01-23 17:01:35 Pacific/Auckland
+          Migrate to 3.dot version scheme.
+          Fixed MOP deprecation warning with CMOP 0.95
+           ( Thanks Gerhard Gossen )
+          Migrate to new MetaRole API.
+          Stop using deprecated get_method_map.
+          Update toolchain.
+          Ship dist.ini
+          CompileTests
+
 0.01001007 2009-08-31 19:52:09 UTC
           Documented that feature.
           Added support for per-attribute callback processors

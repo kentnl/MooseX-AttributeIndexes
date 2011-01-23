@@ -17,6 +17,5 @@ my $i = new_ok('Example2',[
   foo_primary => "bar",
 ]);
 
-use Data::Dump qw( dump );
 is_deeply( $i->attribute_indexes, { 'foo_indexed' => 'hello2', 'foo_primary' => 'bar2' } );
 
