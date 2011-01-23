@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+1.0.0     2011-01-23 17:01:35 Pacific/Auckland
           Migrate to 3.dot version scheme.
           Fixed MOP deprecation warning with CMOP 0.95
            ( Thanks Gerhard Gossen )
