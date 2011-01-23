@@ -29,7 +29,7 @@ sub attribute_indexes {
   my $k = {};
 
   for my $attr_name ( $meta->get_attribute_list ){
-    my $attr = $meta->get_attribute($attr_name);
+    my $attr = $meta->get_attribute( $attr_name );
 
     if( $attr->does( 'MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed' ) ) {
       my $indexed = $attr->primary_index;

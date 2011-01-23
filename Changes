@@ -4,6 +4,7 @@ Revision history for {{$dist->name}}
 <<<<<<< HEAD
           Fixed MOP deprecation warning with CMOP 0.95
            ( Thanks Gerhard Gossen )
+          Stop using deprecated get_method_map.
           Update toolchain.
           Ship dist.ini
           CompileTests
