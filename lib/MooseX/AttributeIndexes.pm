@@ -106,12 +106,12 @@ sub init_meta {
     unless $options{'for_class'}->can('meta');
 
   Moose::Util::MetaRole::apply_metaroles(
-    for_class                 => $options{'for_class'},
-    attribute_metaclass_roles => ['MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed'],
+    for             => $options{'for_class'},
+    class_metaroles => { attribute => ['MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed'], },
   );
   Moose::Util::MetaRole::apply_base_class_roles(
-    for_class => $options{'for_class'},
-    roles     => [ 'MooseX::AttributeIndexes::Provider', 'MooseX::AttributeIndexes::Provider::FromAttributes', ],
+    for   => $options{'for_class'},
+    roles => [ 'MooseX::AttributeIndexes::Provider', 'MooseX::AttributeIndexes::Provider::FromAttributes', ],
   );
 }
 

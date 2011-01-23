@@ -1,9 +1,9 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
-<<<<<<< HEAD
           Fixed MOP deprecation warning with CMOP 0.95
            ( Thanks Gerhard Gossen )
+          Migrate to new MetaRole API.
           Stop using deprecated get_method_map.
           Update toolchain.
           Ship dist.ini
