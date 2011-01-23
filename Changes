@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+          Migrate to 3.dot version scheme.
           Fixed MOP deprecation warning with CMOP 0.95
            ( Thanks Gerhard Gossen )
           Migrate to new MetaRole API.
