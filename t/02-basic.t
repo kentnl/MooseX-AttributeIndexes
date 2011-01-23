@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 5;
+use Test::More 0.92 tests => 5;
 use Test::Moose;
 
 use lib 't/lib';
@@ -17,6 +17,5 @@ my $i = new_ok('Example',[
   foo_primary => "bar",
 ]);
 
-use Data::Dump qw( dump );
 is_deeply( $i->attribute_indexes, { 'foo_indexed' => 'hello', 'foo_primary' => 'bar' } );
 

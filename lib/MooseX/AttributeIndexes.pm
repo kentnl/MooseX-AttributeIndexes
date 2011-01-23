@@ -4,7 +4,7 @@ use warnings;
 package MooseX::AttributeIndexes;
 
 # ABSTRACT: Advertise metadata about your Model-Representing Classes to Any Database tool.
-use Moose ();
+use Moose 0.94 ();
 
 use Moose::Exporter;
 use Moose::Util::MetaRole;
@@ -105,7 +105,7 @@ sub init_meta {
   Moose->init_meta( for_class => $options{'for_class'} )
     unless $options{'for_class'}->can('meta');
 
-  Moose::Util::MetaRole::apply_metaclass_roles(
+  Moose::Util::MetaRole::apply_metaroles(
     for_class                 => $options{'for_class'},
     attribute_metaclass_roles => ['MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed'],
   );

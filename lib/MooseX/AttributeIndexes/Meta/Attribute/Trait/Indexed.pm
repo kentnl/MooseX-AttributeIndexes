@@ -7,8 +7,8 @@ package MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed;
 # $Id:$
 use Moose::Role;
 use Moose::Meta::Attribute::Custom::Trait::Indexed;
-use MooseX::Types::Moose qw(:all);
-use namespace::autoclean;
+use MooseX::Types::Moose 0.19 qw(:all);
+use namespace::autoclean 0.08;
 
 =head1 ATTRIBUTES
 

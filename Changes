@@ -1,8 +1,10 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+<<<<<<< HEAD
           Fixed MOP deprecation warning with CMOP 0.95
            ( Thanks Gerhard Gossen )
+          Update toolchain.
           Ship dist.ini
           CompileTests
 
