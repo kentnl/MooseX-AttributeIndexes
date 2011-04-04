@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed;
 BEGIN {
-  $MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed::VERSION = '1.0.0';
+  $MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed::VERSION = '1.0.1';
 }
 
 # ABSTRACT: A Trait for attributes which permits various indexing tunables
@@ -41,7 +41,7 @@ MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed - A Trait for attribut
 
 =head1 VERSION
 
-version 1.0.0
+version 1.0.1
 
 =head1 ATTRIBUTES
 
@@ -57,9 +57,19 @@ Bool. 0 = This attribute is not a primary index, 1 = This Attribute is a primary
 
 CodeRef.  sub{ my( $attribute_meta, $object, $attribute_value ) = @_;  .... return }
 
-=head1 AUTHOR
+=head1 AUTHORS
+
+=over 4
+
+=item *
 
 Kent Fredric <kentnl@cpan.org>
+
+=item *
+
+Jesse Luehrs <doy@cpan.org>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 

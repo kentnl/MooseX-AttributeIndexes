@@ -19,10 +19,11 @@ my %module_build_args = (
   },
   'dist_abstract' => 'Advertise metadata about your Model-Representing Classes to Any Database tool.',
   'dist_author' => [
-    'Kent Fredric <kentnl@cpan.org>'
+    'Kent Fredric <kentnl@cpan.org>',
+    'Jesse Luehrs <doy@cpan.org>'
   ],
   'dist_name' => 'MooseX-AttributeIndexes',
-  'dist_version' => '1.0.0',
+  'dist_version' => '1.0.1',
   'license' => 'perl',
   'module_name' => 'MooseX::AttributeIndexes',
   'recommends' => {},

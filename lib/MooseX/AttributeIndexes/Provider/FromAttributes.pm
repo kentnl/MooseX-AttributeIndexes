@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package MooseX::AttributeIndexes::Provider::FromAttributes;
 BEGIN {
-  $MooseX::AttributeIndexes::Provider::FromAttributes::VERSION = '1.0.0';
+  $MooseX::AttributeIndexes::Provider::FromAttributes::VERSION = '1.0.1';
 }
 
 # ABSTRACT: A Glue-on-role that provides attribute_indexes data to a class via harvesting attribute traits
@@ -53,7 +53,7 @@ MooseX::AttributeIndexes::Provider::FromAttributes - A Glue-on-role that provide
 
 =head1 VERSION
 
-version 1.0.0
+version 1.0.1
 
 =head1 METHODS
 
@@ -65,9 +65,19 @@ C<indexed> and C<primary_index> keys and returns a hashref of
 
 key->value pairs ( circumventing the getter )
 
-=head1 AUTHOR
+=head1 AUTHORS
+
+=over 4
+
+=item *
 
 Kent Fredric <kentnl@cpan.org>
+
+=item *
+
+Jesse Luehrs <doy@cpan.org>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 

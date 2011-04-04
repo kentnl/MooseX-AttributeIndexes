@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package MooseX::AttributeIndexes::Provider;
 BEGIN {
-  $MooseX::AttributeIndexes::Provider::VERSION = '1.0.0';
+  $MooseX::AttributeIndexes::Provider::VERSION = '1.0.1';
 }
 
 # ABSTRACT: A role that advertises an object is capable of providing metadata.
@@ -27,7 +27,7 @@ MooseX::AttributeIndexes::Provider - A role that advertises an object is capable
 
 =head1 VERSION
 
-version 1.0.0
+version 1.0.1
 
 =head1 SYNOPSIS
 
@@ -51,9 +51,19 @@ This code is alpha, and its interface is prone to change.
 A sub that returns a hashref of index-name=>index-value entries
 for the given object
 
-=head1 AUTHOR
+=head1 AUTHORS
+
+=over 4
+
+=item *
 
 Kent Fredric <kentnl@cpan.org>
+
+=item *
+
+Jesse Luehrs <doy@cpan.org>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 

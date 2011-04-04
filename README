@@ -3,7 +3,7 @@ NAME
     Model-Representing Classes to Any Database tool.
 
 VERSION
-    version 1.0.0
+    version 1.0.1
 
 SYNOPSIS
   Implementing Indexes
@@ -72,13 +72,10 @@ SYNOPSIS
    SEE ALSO
     Search::GIN::Extract::AttributeIndexes
 
-METHODS
-  init_meta
-    Injects the traits for Indexed as default traits on all new attributes,
-    and glues the 2 magical roles into your package.
+AUTHORS
+    *   Kent Fredric <kentnl@cpan.org>
 
-AUTHOR
-    Kent Fredric <kentnl@cpan.org>
+    *   Jesse Luehrs <doy@cpan.org>
 
 COPYRIGHT AND LICENSE
     This software is copyright (c) 2011 by Kent Fredric.

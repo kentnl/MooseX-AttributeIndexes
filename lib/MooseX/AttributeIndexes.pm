@@ -3,7 +3,7 @@ use warnings;
 
 package MooseX::AttributeIndexes;
 BEGIN {
-  $MooseX::AttributeIndexes::VERSION = '1.0.0';
+  $MooseX::AttributeIndexes::VERSION = '1.0.1';
 }
 
 # ABSTRACT: Advertise metadata about your Model-Representing Classes to Any Database tool.
@@ -17,23 +17,29 @@ use MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed;
 
 
 
-Moose::Exporter->setup_import_methods();
-
-
-sub init_meta {
-  my ( $class, %options ) = @_;
-  Moose->init_meta( for_class => $options{'for_class'} )
-    unless $options{'for_class'}->can('meta');
-
-  Moose::Util::MetaRole::apply_metaroles(
-    for             => $options{'for_class'},
-    class_metaroles => { attribute => ['MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed'], },
-  );
-  Moose::Util::MetaRole::apply_base_class_roles(
-    for   => $options{'for_class'},
-    roles => [ 'MooseX::AttributeIndexes::Provider', 'MooseX::AttributeIndexes::Provider::FromAttributes', ],
-  );
-}
+Moose::Exporter->setup_import_methods(
+  class_metaroles => {
+    attribute =>
+        ['MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed'],
+  },
+  role_metaroles => {
+    (Moose->VERSION >= 1.9900
+      ? (applied_attribute =>
+           ['MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed'])
+      : ()),
+    role => ['MooseX::AttributeIndexes::Meta::Role'],
+    application_to_class => [
+      'MooseX::AttributeIndexes::Meta::Role::ApplicationToClass',
+    ],
+    application_to_role => [
+      'MooseX::AttributeIndexes::Meta::Role::ApplicationToRole',
+    ],
+  },
+  base_class_roles => [
+    'MooseX::AttributeIndexes::Provider',
+    'MooseX::AttributeIndexes::Provider::FromAttributes',
+  ],
+);
 
 1;
 
@@ -47,7 +53,7 @@ MooseX::AttributeIndexes - Advertise metadata about your Model-Representing Clas
 
 =head1 VERSION
 
-version 1.0.0
+version 1.0.1
 
 =head1 SYNOPSIS
 
@@ -122,16 +128,19 @@ don't behave like they should.
 
 L<Search::GIN::Extract::AttributeIndexes>
 
-=head1 METHODS
+=head1 AUTHORS
 
-=head2 init_meta
+=over 4
 
-Injects the traits for Indexed as default traits on all new attributes,
-and glues the 2 magical roles into your package.
-
-=head1 AUTHOR
+=item *
 
 Kent Fredric <kentnl@cpan.org>
+
+=item *
+
+Jesse Luehrs <doy@cpan.org>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 

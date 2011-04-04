@@ -1,28 +1,30 @@
 use strict;
 use warnings;
-package Moose::Meta::Attribute::Custom::Trait::Indexed;
+
+package MooseX::AttributeIndexes::Meta::Role;
 BEGIN {
-  $Moose::Meta::Attribute::Custom::Trait::Indexed::VERSION = '1.0.1';
+  $MooseX::AttributeIndexes::Meta::Role::VERSION = '1.0.1';
 }
 
-# ABSTRACT: Registration Node for the Indexed Trait.
-#
-# $Id:$
+# ABSTRACT: MetaRole for AttributeIndexes.
+
+use Moose::Role;
 
 
-sub register_implementation {
-  'MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed';
+sub composition_class_roles {
+    'MooseX::AttributeIndexes::Meta::Role::Composite'
 }
+
+no Moose::Role;
 
 1;
-
 
 __END__
 =pod
 
 =head1 NAME
 
-Moose::Meta::Attribute::Custom::Trait::Indexed - Registration Node for the Indexed Trait.
+MooseX::AttributeIndexes::Meta::Role - MetaRole for AttributeIndexes.
 
 =head1 VERSION
 
@@ -30,9 +32,9 @@ version 1.0.1
 
 =head1 METHODS
 
-=head2 register_implementation
+=head2 composition_class_roles
 
-Associates the Indexed trait with MX::AI
+returns C<MooseX::AttributeIndexes::Meta::Role::Composite>
 
 =head1 AUTHORS
 

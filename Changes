@@ -1,28 +1,40 @@
 Revision history for MooseX-AttributeIndexes
 
-1.0.0     2011-01-23 17:01:35 Pacific/Auckland
-          Migrate to 3.dot version scheme.
-          Fixed MOP deprecation warning with CMOP 0.95
-           ( Thanks Gerhard Gossen )
-          Migrate to new MetaRole API.
-          Stop using deprecated get_method_map.
-          Update toolchain.
-          Ship dist.ini
-          CompileTests
+1.0.1 2011-04-04T07:40:17Z
+ [Features]
+ - Rework code to to work properly with role attributes. ( Thanks doy /
+   Jesse Luehrs )
 
-0.01001007 2009-08-31 19:52:09 UTC
-          Documented that feature.
-          Added support for per-attribute callback processors
+ [Packaging]
+ - Rework Changelog for CPAN::Changes 1:1 compatibility.
+ - Move from @KENTNL to @Author::KENTNL
 
-0.01000613 2009-08-28 01:55:48 UTC
-          Ramped up deps to hopefully solve
-           weird Mx::Types Carp::Clan failure.
+1.0.0 2011-01-23T04:01:35Z
+ [BugFix]
+ - Fixed MOP deprecation warning with CMOP 0.95 ( Thanks Gerhard Gossen )
+ - Stop using deprecated get_method_map.
 
-0.01000404 2009-08-25 16:18:59 UTC
-          Depend Resolution Fixup
-          See-Also doc, 
-          Perltidy
+ [Features]
+ - Migrate to new MetaRole API.
 
-0.01000300 2009-08-24 12:06:14 UTC
-          First version.
+ [Packaging]
+ - Migrate to 3.dot version scheme.
+ - Update toolchain.
+ - Ship dist.ini
+ - CompileTests
+
+0.01001007 2009-08-31T19:52:09Z
+ - Documented that feature.
+ - Added support for per-attribute callback processors
+
+0.01000613 2009-08-28T01:55:48Z
+ - Ramped up deps to hopefully solve weird Mx::Types Carp::Clan failure.
+
+0.01000404 2009-08-25T16:18:59Z
+ - Depend Resolution Fixup
+ - See-Also doc,
+ - Perltidy
+
+0.01000300 2009-08-24T12:06:14Z
+ - First version.
 
