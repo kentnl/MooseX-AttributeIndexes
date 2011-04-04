@@ -1,3 +1,6 @@
+use strict;
+use warnings;
+
 package MooseX::AttributeIndexes::Meta::Role::ApplicationToRole;
 use Moose::Role;
 
