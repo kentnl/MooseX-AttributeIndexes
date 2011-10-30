@@ -28,7 +28,7 @@ This code is alpha, and its interface is prone to change.
 
 =head1 REQUIRES
 
-=head2 attribute_indexes
+=head2 C<attribute_indexes>
 
 A sub that returns a hashref of index-name=>index-value entries
 for the given object

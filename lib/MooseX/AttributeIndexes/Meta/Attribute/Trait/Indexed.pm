@@ -5,7 +5,6 @@ package MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed;
 
 # ABSTRACT: A Trait for attributes which permits various indexing tunables
 
-# $Id:$
 use Moose::Role;
 use Moose::Meta::Attribute::Custom::Trait::Indexed;
 use MooseX::Types::Moose 0.19 qw(:all);
@@ -13,7 +12,7 @@ use namespace::autoclean 0.08;
 
 =head1 ATTRIBUTES
 
-=head2 indexed
+=head2 C<indexed>
 
 Bool. 0 = This attribute is not/cannot indexed, 1 = This Attribute is/can-be indexed.
 
@@ -28,7 +27,7 @@ has 'indexed' => (
   default  => 0,
 );
 
-=head2 primary_index
+=head2 C<primary_index>
 
 Bool. 0 = This attribute is not a primary index, 1 = This Attribute is a primary index.
 

@@ -12,7 +12,7 @@ use namespace::autoclean;
 
 =head1 METHODS
 
-=head2 attribute_indexes
+=head2 C<attribute_indexes>
 
 A very trivial scanner, which looks for the
 

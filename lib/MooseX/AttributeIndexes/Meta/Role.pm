@@ -7,7 +7,7 @@ package MooseX::AttributeIndexes::Meta::Role;
 
 use Moose::Role;
 
-=method composition_class_roles
+=method C<composition_class_roles>
 
 returns C<MooseX::AttributeIndexes::Meta::Role::Composite>
 
