@@ -1,5 +1,6 @@
 use strict;
 use warnings;
+
 package MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed;
 
 # ABSTRACT: A Trait for attributes which permits various indexing tunables

@@ -1,5 +1,6 @@
 use strict;
 use warnings;
+
 package Moose::Meta::Attribute::Custom::Trait::Indexed;
 
 # ABSTRACT: Registration Node for the Indexed Trait.

@@ -90,27 +90,18 @@ L<Search::GIN::Extract::AttributeIndexes>
 =cut
 
 Moose::Exporter->setup_import_methods(
-  class_metaroles => {
-    attribute =>
-        ['MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed'],
+  class_metaroles => { attribute => ['MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed'], },
+  role_metaroles  => {
+    (
+      Moose->VERSION >= 1.9900
+      ? ( applied_attribute => ['MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed'] )
+      : ()
+    ),
+    role                 => ['MooseX::AttributeIndexes::Meta::Role'],
+    application_to_class => [ 'MooseX::AttributeIndexes::Meta::Role::ApplicationToClass', ],
+    application_to_role  => [ 'MooseX::AttributeIndexes::Meta::Role::ApplicationToRole', ],
   },
-  role_metaroles => {
-    (Moose->VERSION >= 1.9900
-      ? (applied_attribute =>
-           ['MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed'])
-      : ()),
-    role => ['MooseX::AttributeIndexes::Meta::Role'],
-    application_to_class => [
-      'MooseX::AttributeIndexes::Meta::Role::ApplicationToClass',
-    ],
-    application_to_role => [
-      'MooseX::AttributeIndexes::Meta::Role::ApplicationToRole',
-    ],
-  },
-  base_class_roles => [
-    'MooseX::AttributeIndexes::Provider',
-    'MooseX::AttributeIndexes::Provider::FromAttributes',
-  ],
+  base_class_roles => [ 'MooseX::AttributeIndexes::Provider', 'MooseX::AttributeIndexes::Provider::FromAttributes', ],
 );
 
 1;

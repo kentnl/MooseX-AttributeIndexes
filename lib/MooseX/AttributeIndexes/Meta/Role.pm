@@ -14,7 +14,7 @@ returns C<MooseX::AttributeIndexes::Meta::Role::Composite>
 =cut
 
 sub composition_class_roles {
-    'MooseX::AttributeIndexes::Meta::Role::Composite'
+  'MooseX::AttributeIndexes::Meta::Role::Composite';
 }
 
 no Moose::Role;
