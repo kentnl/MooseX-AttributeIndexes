@@ -3,24 +3,24 @@ use warnings;
 
 package MooseX::AttributeIndexes::Meta::Role::ApplicationToClass;
 BEGIN {
-  $MooseX::AttributeIndexes::Meta::Role::ApplicationToClass::VERSION = '1.0.1';
+  $MooseX::AttributeIndexes::Meta::Role::ApplicationToClass::AUTHORITY = 'cpan:KENTNL';
+}
+{
+  $MooseX::AttributeIndexes::Meta::Role::ApplicationToClass::VERSION = '1.0.2';
 }
 use Moose::Role;
 
 around apply => sub {
-    my $orig  = shift;
-    my $self  = shift;
-    my ($role, $class) = @_;
+  my $orig = shift;
+  my $self = shift;
+  my ( $role, $class ) = @_;
 
-    Moose::Util::MetaRole::apply_base_class_roles(
-        for   => $class->name,
-        roles => [
-            'MooseX::AttributeIndexes::Provider',
-            'MooseX::AttributeIndexes::Provider::FromAttributes',
-        ],
-    );
+  Moose::Util::MetaRole::apply_base_class_roles(
+    for   => $class->name,
+    roles => [ 'MooseX::AttributeIndexes::Provider', 'MooseX::AttributeIndexes::Provider::FromAttributes', ],
+  );
 
-    $self->$orig( $role, $class );
+  $self->$orig( $role, $class );
 };
 
 no Moose::Role;
@@ -36,7 +36,7 @@ MooseX::AttributeIndexes::Meta::Role::ApplicationToClass
 
 =head1 VERSION
 
-version 1.0.1
+version 1.0.2
 
 =head1 AUTHORS
 

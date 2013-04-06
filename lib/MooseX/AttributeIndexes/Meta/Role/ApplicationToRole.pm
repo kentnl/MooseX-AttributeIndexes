@@ -3,28 +3,27 @@ use warnings;
 
 package MooseX::AttributeIndexes::Meta::Role::ApplicationToRole;
 BEGIN {
-  $MooseX::AttributeIndexes::Meta::Role::ApplicationToRole::VERSION = '1.0.1';
+  $MooseX::AttributeIndexes::Meta::Role::ApplicationToRole::AUTHORITY = 'cpan:KENTNL';
+}
+{
+  $MooseX::AttributeIndexes::Meta::Role::ApplicationToRole::VERSION = '1.0.2';
 }
 use Moose::Role;
 
 around apply => sub {
-    my $orig  = shift;
-    my $self  = shift;
-    my ($role1, $role2) = @_;
+  my $orig = shift;
+  my $self = shift;
+  my ( $role1, $role2 ) = @_;
 
-    $role2 = Moose::Util::MetaRole::apply_metaroles(
-        for             => $role2,
-        role_metaroles => {
-            application_to_class => [
-                'MooseX::AttributeIndexes::Meta::Role::ApplicationToClass',
-            ],
-            application_to_role => [
-                'MooseX::AttributeIndexes::Meta::Role::ApplicationToRole',
-            ],
-        }
-    );
+  $role2 = Moose::Util::MetaRole::apply_metaroles(
+    for            => $role2,
+    role_metaroles => {
+      application_to_class => [ 'MooseX::AttributeIndexes::Meta::Role::ApplicationToClass', ],
+      application_to_role  => [ 'MooseX::AttributeIndexes::Meta::Role::ApplicationToRole', ],
+    }
+  );
 
-    $self->$orig( $role1, $role2 );
+  $self->$orig( $role1, $role2 );
 };
 
 no Moose::Role;
@@ -40,7 +39,7 @@ MooseX::AttributeIndexes::Meta::Role::ApplicationToRole
 
 =head1 VERSION
 
-version 1.0.1
+version 1.0.2
 
 =head1 AUTHORS
 

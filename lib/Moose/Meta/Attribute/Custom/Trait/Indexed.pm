@@ -1,17 +1,19 @@
 use strict;
 use warnings;
+
 package Moose::Meta::Attribute::Custom::Trait::Indexed;
 BEGIN {
-  $Moose::Meta::Attribute::Custom::Trait::Indexed::VERSION = '1.0.1';
+  $Moose::Meta::Attribute::Custom::Trait::Indexed::AUTHORITY = 'cpan:KENTNL';
+}
+{
+  $Moose::Meta::Attribute::Custom::Trait::Indexed::VERSION = '1.0.2';
 }
 
 # ABSTRACT: Registration Node for the Indexed Trait.
-#
-# $Id:$
 
 
 sub register_implementation {
-  'MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed';
+  return 'MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed';
 }
 
 1;
@@ -26,11 +28,11 @@ Moose::Meta::Attribute::Custom::Trait::Indexed - Registration Node for the Index
 
 =head1 VERSION
 
-version 1.0.1
+version 1.0.2
 
 =head1 METHODS
 
-=head2 register_implementation
+=head2 C<register_implementation>
 
 Associates the Indexed trait with MX::AI
 

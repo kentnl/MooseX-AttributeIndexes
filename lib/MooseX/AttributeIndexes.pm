@@ -3,7 +3,10 @@ use warnings;
 
 package MooseX::AttributeIndexes;
 BEGIN {
-  $MooseX::AttributeIndexes::VERSION = '1.0.1';
+  $MooseX::AttributeIndexes::AUTHORITY = 'cpan:KENTNL';
+}
+{
+  $MooseX::AttributeIndexes::VERSION = '1.0.2';
 }
 
 # ABSTRACT: Advertise metadata about your Model-Representing Classes to Any Database tool.
@@ -18,27 +21,18 @@ use MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed;
 
 
 Moose::Exporter->setup_import_methods(
-  class_metaroles => {
-    attribute =>
-        ['MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed'],
+  class_metaroles => { attribute => ['MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed'], },
+  role_metaroles  => {
+    (
+      Moose->VERSION >= 1.9900
+      ? ( applied_attribute => ['MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed'] )
+      : ()
+    ),
+    role                 => ['MooseX::AttributeIndexes::Meta::Role'],
+    application_to_class => [ 'MooseX::AttributeIndexes::Meta::Role::ApplicationToClass', ],
+    application_to_role  => [ 'MooseX::AttributeIndexes::Meta::Role::ApplicationToRole', ],
   },
-  role_metaroles => {
-    (Moose->VERSION >= 1.9900
-      ? (applied_attribute =>
-           ['MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed'])
-      : ()),
-    role => ['MooseX::AttributeIndexes::Meta::Role'],
-    application_to_class => [
-      'MooseX::AttributeIndexes::Meta::Role::ApplicationToClass',
-    ],
-    application_to_role => [
-      'MooseX::AttributeIndexes::Meta::Role::ApplicationToRole',
-    ],
-  },
-  base_class_roles => [
-    'MooseX::AttributeIndexes::Provider',
-    'MooseX::AttributeIndexes::Provider::FromAttributes',
-  ],
+  base_class_roles => [ 'MooseX::AttributeIndexes::Provider', 'MooseX::AttributeIndexes::Provider::FromAttributes', ],
 );
 
 1;
@@ -53,7 +47,7 @@ MooseX::AttributeIndexes - Advertise metadata about your Model-Representing Clas
 
 =head1 VERSION
 
-version 1.0.1
+version 1.0.2
 
 =head1 SYNOPSIS
 

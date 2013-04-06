@@ -1,5 +1,26 @@
 Revision history for MooseX-AttributeIndexes
 
+1.0.2 2011-10-30T19:28:41Z
+ - Maintenance Release
+
+ [Dependencies]
+ - new: runtime requires perl 5.10.0
+ - new: runtime requires strict
+ - new: runtime requires warnings
+ - removed: test requires English
+ - updated: develop suggests @Author::KENTNL 1.1.0
+
+ [Internals]
+ - $VERSION set outside begin
+ - $AUTHORITY now defined
+ - code tidied
+
+ [Packaging]
+ - Update License ( Indent, Address )
+ - Move author/release tests to xt/
+ - Repository urls moved to https://
+ - added x_authority
+
 1.0.1 2011-04-04T07:40:17Z
  [Features]
  - Rework code to to work properly with role attributes. ( Thanks doy /

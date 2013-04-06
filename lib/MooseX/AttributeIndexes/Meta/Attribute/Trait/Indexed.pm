@@ -1,13 +1,16 @@
 use strict;
 use warnings;
+
 package MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed;
 BEGIN {
-  $MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed::VERSION = '1.0.1';
+  $MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed::AUTHORITY = 'cpan:KENTNL';
+}
+{
+  $MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed::VERSION = '1.0.2';
 }
 
 # ABSTRACT: A Trait for attributes which permits various indexing tunables
 
-# $Id:$
 use Moose::Role;
 use Moose::Meta::Attribute::Custom::Trait::Indexed;
 use MooseX::Types::Moose 0.19 qw(:all);
@@ -41,17 +44,17 @@ MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed - A Trait for attribut
 
 =head1 VERSION
 
-version 1.0.1
+version 1.0.2
 
 =head1 ATTRIBUTES
 
-=head2 indexed
+=head2 C<indexed>
 
 Bool. 0 = This attribute is not/cannot indexed, 1 = This Attribute is/can-be indexed.
 
 CodeRef.  sub{ my( $attribute_meta, $object, $attribute_value ) = @_;  .... return }
 
-=head2 primary_index
+=head2 C<primary_index>
 
 Bool. 0 = This attribute is not a primary index, 1 = This Attribute is a primary index.
 

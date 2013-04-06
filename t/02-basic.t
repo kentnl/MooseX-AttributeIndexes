@@ -11,11 +11,14 @@ meta_ok('Example');
 does_ok( 'Example', 'MooseX::AttributeIndexes::Provider' );
 does_ok( 'Example', 'MooseX::AttributeIndexes::Provider::FromAttributes' );
 
-my $i = new_ok('Example',[
-  foo_indexed => "hello",
-  foo_nothing => "world",
-  foo_primary => "bar",
-]);
+my $i = new_ok(
+  'Example',
+  [
+    foo_indexed => "hello",
+    foo_nothing => "world",
+    foo_primary => "bar",
+  ]
+);
 
 is_deeply( $i->attribute_indexes, { 'foo_indexed' => 'hello', 'foo_primary' => 'bar' } );
 

@@ -1,8 +1,12 @@
 use strict;
 use warnings;
+
 package MooseX::AttributeIndexes::Provider::FromAttributes;
 BEGIN {
-  $MooseX::AttributeIndexes::Provider::FromAttributes::VERSION = '1.0.1';
+  $MooseX::AttributeIndexes::Provider::FromAttributes::AUTHORITY = 'cpan:KENTNL';
+}
+{
+  $MooseX::AttributeIndexes::Provider::FromAttributes::VERSION = '1.0.2';
 }
 
 # ABSTRACT: A Glue-on-role that provides attribute_indexes data to a class via harvesting attribute traits
@@ -20,21 +24,21 @@ sub attribute_indexes {
 
   my $k = {};
 
-  for my $attr_name ( $meta->get_attribute_list ){
-    my $attr = $meta->get_attribute( $attr_name );
+  for my $attr_name ( $meta->get_attribute_list ) {
+    my $attr = $meta->get_attribute($attr_name);
 
-    if( $attr->does( 'MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed' ) ) {
+    if ( $attr->does('MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed') ) {
       my $indexed = $attr->primary_index;
       $indexed ||= $attr->indexed;
       my $result;
-      if( $indexed ){
+      if ($indexed) {
         $result = $attr->get_value($self);
       }
-      if( not blessed($indexed) and defined reftype( $indexed ) and reftype( $indexed ) eq 'CODE' ){
+      if ( not blessed($indexed) and defined reftype($indexed) and reftype($indexed) eq 'CODE' ) {
         local $_ = $result;
         $result = $attr->$indexed( $self, $result );
       }
-      if ( $result ){
+      if ($result) {
         $k->{$attr_name} = $result;
       }
     }
@@ -53,11 +57,11 @@ MooseX::AttributeIndexes::Provider::FromAttributes - A Glue-on-role that provide
 
 =head1 VERSION
 
-version 1.0.1
+version 1.0.2
 
 =head1 METHODS
 
-=head2 attribute_indexes
+=head2 C<attribute_indexes>
 
 A very trivial scanner, which looks for the
 
