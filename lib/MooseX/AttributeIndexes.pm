@@ -90,8 +90,10 @@ L<Search::GIN::Extract::AttributeIndexes>
 =cut
 
 Moose::Exporter->setup_import_methods(
-  class_metaroles => { attribute => ['MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed'], },
-  role_metaroles  => {
+  class_metaroles => {
+    attribute => ['MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed'],
+  },
+  role_metaroles => {
     (
       Moose->VERSION >= 1.9900
       ? ( applied_attribute => ['MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed'] )
