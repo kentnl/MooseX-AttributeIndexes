@@ -6,7 +6,7 @@ BEGIN {
   $MooseX::AttributeIndexes::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $MooseX::AttributeIndexes::VERSION = '1.0.2';
+  $MooseX::AttributeIndexes::VERSION = '1.0.3';
 }
 
 # ABSTRACT: Advertise metadata about your Model-Representing Classes to Any Database tool.
@@ -21,8 +21,10 @@ use MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed;
 
 
 Moose::Exporter->setup_import_methods(
-  class_metaroles => { attribute => ['MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed'], },
-  role_metaroles  => {
+  class_metaroles => {
+    attribute => ['MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed'],
+  },
+  role_metaroles => {
     (
       Moose->VERSION >= 1.9900
       ? ( applied_attribute => ['MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed'] )
@@ -37,8 +39,8 @@ Moose::Exporter->setup_import_methods(
 
 1;
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -47,7 +49,7 @@ MooseX::AttributeIndexes - Advertise metadata about your Model-Representing Clas
 
 =head1 VERSION
 
-version 1.0.2
+version 1.0.3
 
 =head1 SYNOPSIS
 
@@ -138,10 +140,9 @@ Jesse Luehrs <doy@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Kent Fredric.
+This software is copyright (c) 2013 by Kent Fredric.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

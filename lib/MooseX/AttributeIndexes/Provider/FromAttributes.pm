@@ -6,7 +6,7 @@ BEGIN {
   $MooseX::AttributeIndexes::Provider::FromAttributes::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $MooseX::AttributeIndexes::Provider::FromAttributes::VERSION = '1.0.2';
+  $MooseX::AttributeIndexes::Provider::FromAttributes::VERSION = '1.0.3';
 }
 
 # ABSTRACT: A Glue-on-role that provides attribute_indexes data to a class via harvesting attribute traits
@@ -34,7 +34,10 @@ sub attribute_indexes {
       if ($indexed) {
         $result = $attr->get_value($self);
       }
-      if ( not blessed($indexed) and defined reftype($indexed) and reftype($indexed) eq 'CODE' ) {
+      if (  not blessed($indexed)
+        and defined reftype($indexed)
+        and reftype($indexed) eq 'CODE' )
+      {
         local $_ = $result;
         $result = $attr->$indexed( $self, $result );
       }
@@ -47,8 +50,8 @@ sub attribute_indexes {
 }
 1;
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -57,7 +60,7 @@ MooseX::AttributeIndexes::Provider::FromAttributes - A Glue-on-role that provide
 
 =head1 VERSION
 
-version 1.0.2
+version 1.0.3
 
 =head1 METHODS
 
@@ -85,10 +88,9 @@ Jesse Luehrs <doy@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Kent Fredric.
+This software is copyright (c) 2013 by Kent Fredric.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

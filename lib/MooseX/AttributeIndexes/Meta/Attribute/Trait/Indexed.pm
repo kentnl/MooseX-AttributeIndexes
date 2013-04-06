@@ -6,7 +6,7 @@ BEGIN {
   $MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed::VERSION = '1.0.2';
+  $MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed::VERSION = '1.0.3';
 }
 
 # ABSTRACT: A Trait for attributes which permits various indexing tunables
@@ -34,8 +34,8 @@ has 'primary_index' => (
 
 1;
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -44,7 +44,7 @@ MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed - A Trait for attribut
 
 =head1 VERSION
 
-version 1.0.2
+version 1.0.3
 
 =head1 ATTRIBUTES
 
@@ -76,10 +76,9 @@ Jesse Luehrs <doy@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Kent Fredric.
+This software is copyright (c) 2013 by Kent Fredric.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

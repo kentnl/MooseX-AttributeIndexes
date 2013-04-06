@@ -6,7 +6,7 @@ BEGIN {
   $MooseX::AttributeIndexes::Provider::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $MooseX::AttributeIndexes::Provider::VERSION = '1.0.2';
+  $MooseX::AttributeIndexes::Provider::VERSION = '1.0.3';
 }
 
 # ABSTRACT: A role that advertises an object is capable of providing metadata.
@@ -21,8 +21,8 @@ requires 'attribute_indexes';
 
 1;
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -31,7 +31,7 @@ MooseX::AttributeIndexes::Provider - A role that advertises an object is capable
 
 =head1 VERSION
 
-version 1.0.2
+version 1.0.3
 
 =head1 SYNOPSIS
 
@@ -71,10 +71,9 @@ Jesse Luehrs <doy@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Kent Fredric.
+This software is copyright (c) 2013 by Kent Fredric.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
