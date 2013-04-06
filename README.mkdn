@@ -1,0 +1,92 @@
+# NAME
+
+MooseX::AttributeIndexes - Advertise metadata about your Model-Representing Classes to Any Database tool.
+
+# VERSION
+
+version 1.0.3
+
+# SYNOPSIS
+
+## Implementing Indexes
+
+    package My::Package;
+    use Moose;
+    use MooseX::AttributeIndexes;
+    use MooseX::Types::Moose qw( :all );
+
+    has 'id' => (
+      isa => Str,
+      is  => 'rw',
+      primary_index => 1,
+    );
+
+    has 'name' => (
+      isa => Str,
+      is  => 'rw',
+      indexed => 1,
+    );
+
+    has 'foo' => (
+      isa => Str,
+      is  => 'rw',
+    );
+
+## Accessing Indexed Data
+
+    package TestScript;
+
+    use My::Package;
+
+    my $foo = My::Package->new(
+      id => "Bob",
+      name => "Smith",
+      foo  => "Bar",
+    );
+
+    $foo->attribute_indexes
+    # { id => 'Bob', name => 'Smith' }
+
+## Using With Search::GIN::Extract::Callback
+
+    Search::GIN::Extract::Callback(
+      extract => sub {
+        my ( $obj, $callback, $args ) = @_;
+        if( $obj->does( 'MooseX::AttributeIndexes::Provider') ){
+          return $obj->attribute_indexes;
+        }
+      }
+    );
+
+## CODERef
+
+Since 0.01001007, the following notation is also supported:
+
+    has 'name' => (
+      ...
+      indexed => sub {
+        my ( $attribute_meta, $object, $value ) = @_;
+        return "$_" ; # $_ == $value
+      }
+    );
+
+Noting of course, $value is populated by the meta-accessor.
+
+This is a simple way to add exceptions for weird cases for things you want to index that
+don't behave like they should.
+
+### SEE ALSO
+
+[Search::GIN::Extract::AttributeIndexes](http://search.cpan.org/perldoc?Search::GIN::Extract::AttributeIndexes)
+
+# AUTHORS
+
+- Kent Fredric <kentnl@cpan.org>
+- Jesse Luehrs <doy@cpan.org>
+
+# COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2013 by Kent Fredric.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
