@@ -1,6 +1,6 @@
 Revision history for MooseX-AttributeIndexes
 
-1.0.3 2013-04-06T05:09:10Z
+1.0.3 2013-04-06T05:09:27Z
  - Maintenance release for Module::Build 0.4004
 
  [Dependencies::Added / develop requires]
