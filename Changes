@@ -1,0 +1,63 @@
+Revision history for MooseX-AttributeIndexes
+
+1.0.3 2013-04-06T05:02:14Z
+
+1.0.2 2011-10-30T19:28:41Z
+ - Maintenance Release
+
+ [Dependencies]
+ - new: runtime requires perl 5.10.0
+ - new: runtime requires strict
+ - new: runtime requires warnings
+ - removed: test requires English
+ - updated: develop suggests @Author::KENTNL 1.1.0
+
+ [Internals]
+ - $VERSION set outside begin
+ - $AUTHORITY now defined
+ - code tidied
+
+ [Packaging]
+ - Update License ( Indent, Address )
+ - Move author/release tests to xt/
+ - Repository urls moved to https://
+ - added x_authority
+
+1.0.1 2011-04-04T07:40:17Z
+ [Features]
+ - Rework code to to work properly with role attributes. ( Thanks doy /
+   Jesse Luehrs )
+
+ [Packaging]
+ - Rework Changelog for CPAN::Changes 1:1 compatibility.
+ - Move from @KENTNL to @Author::KENTNL
+
+1.0.0 2011-01-23T04:01:35Z
+ [BugFix]
+ - Fixed MOP deprecation warning with CMOP 0.95 ( Thanks Gerhard Gossen )
+ - Stop using deprecated get_method_map.
+
+ [Features]
+ - Migrate to new MetaRole API.
+
+ [Packaging]
+ - Migrate to 3.dot version scheme.
+ - Update toolchain.
+ - Ship dist.ini
+ - CompileTests
+
+0.01001007 2009-08-31T19:52:09Z
+ - Documented that feature.
+ - Added support for per-attribute callback processors
+
+0.01000613 2009-08-28T01:55:48Z
+ - Ramped up deps to hopefully solve weird Mx::Types Carp::Clan failure.
+
+0.01000404 2009-08-25T16:18:59Z
+ - Depend Resolution Fixup
+ - See-Also doc,
+ - Perltidy
+
+0.01000300 2009-08-24T12:06:14Z
+ - First version.
+
