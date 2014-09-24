@@ -3,6 +3,8 @@ use warnings;
 
 package MooseX::AttributeIndexes::Meta::Role;
 
+our $VERSION = '2.000000';
+
 # ABSTRACT: MetaRole for AttributeIndexes.
 
 use Moose::Role;
