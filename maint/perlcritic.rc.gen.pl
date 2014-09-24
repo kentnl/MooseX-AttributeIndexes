@@ -20,7 +20,7 @@ $bundle->configure;
 
 my @stopwords = (
   qw(
-      metadata hashref Luehrs MetaRole AttributeIndexes indexable getter Bool CodeRef CODEref accessor
+      metadata hashref Luehrs MetaRole AttributeIndexes indexable getter Bool CodeRef CODEref accessor tunables
     )
 );
 for my $wordlist (@stopwords) {
