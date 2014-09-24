@@ -1,14 +1,16 @@
+use 5.006;    # our, pragmas
 use strict;
 use warnings;
 
 package MooseX::AttributeIndexes::Meta::Role::Composite;
-BEGIN {
-  $MooseX::AttributeIndexes::Meta::Role::Composite::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $MooseX::AttributeIndexes::Meta::Role::Composite::VERSION = '1.0.3';
-}
-use Moose::Role;
+
+our $VERSION = '2.000000';
+
+# ABSTRACT: Give a either a class or role indexable attributes.
+
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
+use Moose::Role qw( around );
 
 around apply_params => sub {
   my $orig = shift;
@@ -35,13 +37,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
-MooseX::AttributeIndexes::Meta::Role::Composite
+MooseX::AttributeIndexes::Meta::Role::Composite - Give a either a class or role indexable attributes.
 
 =head1 VERSION
 
-version 1.0.3
+version 2.000000
 
 =head1 AUTHORS
 
@@ -59,7 +63,7 @@ Jesse Luehrs <doy@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric.
+This software is copyright (c) 2014 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

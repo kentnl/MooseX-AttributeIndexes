@@ -1,20 +1,29 @@
+use 5.006;    # our, pragma
 use strict;
 use warnings;
 
 package MooseX::AttributeIndexes::Provider::FromAttributes;
-BEGIN {
-  $MooseX::AttributeIndexes::Provider::FromAttributes::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $MooseX::AttributeIndexes::Provider::FromAttributes::VERSION = '1.0.3';
-}
+
+our $VERSION = '2.000000';
 
 # ABSTRACT: A Glue-on-role that provides attribute_indexes data to a class via harvesting attribute traits
 
-# $Id:$
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
 use Moose::Role;
 use Scalar::Util qw( blessed reftype );
-use namespace::autoclean;
+use namespace::clean -except => 'meta';
+
+
+
+
+
+
+
+
+
+
+
 
 
 sub attribute_indexes {
@@ -36,7 +45,7 @@ sub attribute_indexes {
       }
       if (  not blessed($indexed)
         and defined reftype($indexed)
-        and reftype($indexed) eq 'CODE' )
+        and 'CODE' eq reftype($indexed) )
       {
         local $_ = $result;
         $result = $attr->$indexed( $self, $result );
@@ -48,11 +57,16 @@ sub attribute_indexes {
   }
   return $k;
 }
+
+no Moose::Role;
+
 1;
 
 __END__
 
 =pod
+
+=encoding UTF-8
 
 =head1 NAME
 
@@ -60,7 +74,7 @@ MooseX::AttributeIndexes::Provider::FromAttributes - A Glue-on-role that provide
 
 =head1 VERSION
 
-version 1.0.3
+version 2.000000
 
 =head1 METHODS
 
@@ -88,7 +102,7 @@ Jesse Luehrs <doy@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric.
+This software is copyright (c) 2014 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

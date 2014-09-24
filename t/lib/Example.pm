@@ -4,7 +4,6 @@ package Example;
 use Moose;
 
 use MooseX::AttributeIndexes;
-use namespace::autoclean;
 has 'foo_indexed' => (
   isa      => 'Str',
   required => 1,

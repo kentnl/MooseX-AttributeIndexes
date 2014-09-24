@@ -1,36 +1,35 @@
+use 5.006;    #our, pragmas
 use strict;
 use warnings;
 
 package MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed;
-BEGIN {
-  $MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed::VERSION = '1.0.3';
-}
+
+our $VERSION = '2.000000';
 
 # ABSTRACT: A Trait for attributes which permits various indexing tunables
 
-use Moose::Role;
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
+use Moose::Role qw( has );
 use Moose::Meta::Attribute::Custom::Trait::Indexed;
-use MooseX::Types::Moose 0.19 qw(:all);
-use namespace::autoclean 0.08;
-
-
-has 'indexed' => (
-  is       => 'ro',
-  isa      => Bool | CodeRef,
-  required => 1,
-  default  => 0,
-);
-
+use MooseX::Types::Moose 0.19 qw( CodeRef Bool );
+use namespace::clean -except => 'meta';
 
 has 'primary_index' => (
   is       => 'ro',
-  isa      => Bool | CodeRef,
+  isa      => Bool | CodeRef,    ## no critic (Bangs::ProhibitBitwiseOperators)
   required => 1,
   default  => 0,
 );
+
+has 'indexed' => (
+  is       => 'ro',
+  isa      => Bool | CodeRef,    ## no critic (Bangs::ProhibitBitwiseOperators)
+  required => 1,
+  default  => 0,
+);
+
+no Moose::Role;
 
 1;
 
@@ -38,13 +37,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed - A Trait for attributes which permits various indexing tunables
 
 =head1 VERSION
 
-version 1.0.3
+version 2.000000
 
 =head1 ATTRIBUTES
 
@@ -76,7 +77,7 @@ Jesse Luehrs <doy@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric.
+This software is copyright (c) 2014 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

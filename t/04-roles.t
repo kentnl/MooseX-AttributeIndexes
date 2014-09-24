@@ -5,7 +5,7 @@ use Test::More;
 
 {
 
-  package Foo::Role;
+  package Consumee::Role;
   use Moose::Role;
   use MooseX::AttributeIndexes;
 
@@ -19,26 +19,26 @@ use Test::More;
 
 {
 
-  package Foo;
+  package Consumee;
   use Moose;
 
-  with 'Foo::Role';
+  with @{ ['Consumee::Role'] };
 }
 
 {
 
-  package Bar::Role;
+  package Consumer::Role;
   use Moose::Role;
 
-  with 'Foo::Role';
+  with @{ ['Consumee::Role'] };
 }
 
 {
 
-  package Bar;
+  package Consumer;
   use Moose;
 
-  with 'Bar::Role';
+  with @{ ['Consumer::Role'] };
 }
 
 {
@@ -52,11 +52,11 @@ use Test::More;
   package Baz;
   use Moose;
 
-  with 'Foo::Role', 'Empty::Role';
+  with @{ [ 'Consumee::Role', 'Empty::Role' ] };
 }
 
-is_deeply( Foo->new( bar => "BAR" )->attribute_indexes, { bar => "BAR" }, "application to class works" );
-is_deeply( Bar->new( bar => "BAR" )->attribute_indexes, { bar => "BAR" }, "application to role works" );
+is_deeply( Consumee->new( bar => "BAR" )->attribute_indexes, { bar => "BAR" }, "application to class works" );
+is_deeply( Consumer->new( bar => "BAR" )->attribute_indexes, { bar => "BAR" }, "application to role works" );
 is_deeply( Baz->new( bar => "BAR" )->attribute_indexes, { bar => "BAR" }, "role composition works" );
 
 done_testing;

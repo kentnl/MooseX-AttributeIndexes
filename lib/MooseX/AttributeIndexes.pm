@@ -1,24 +1,25 @@
+use 5.006;    # our, pragmas
 use strict;
 use warnings;
 
 package MooseX::AttributeIndexes;
-BEGIN {
-  $MooseX::AttributeIndexes::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $MooseX::AttributeIndexes::VERSION = '1.0.3';
-}
+
+our $VERSION = '2.000000';
 
 # ABSTRACT: Advertise metadata about your Model-Representing Classes to Any Database tool.
-use Moose 0.94 ();
+
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
+BEGIN {
+  require Moose;
+  Moose->VERSION('0.94');
+}
 
 use Moose::Exporter;
 use Moose::Util::MetaRole;
 use MooseX::AttributeIndexes::Provider;
 use MooseX::AttributeIndexes::Provider::FromAttributes;
 use MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed;
-
-
 
 Moose::Exporter->setup_import_methods(
   class_metaroles => {
@@ -43,13 +44,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 MooseX::AttributeIndexes - Advertise metadata about your Model-Representing Classes to Any Database tool.
 
 =head1 VERSION
 
-version 1.0.3
+version 2.000000
 
 =head1 SYNOPSIS
 
@@ -122,7 +125,7 @@ don't behave like they should.
 
 =head3 SEE ALSO
 
-L<Search::GIN::Extract::AttributeIndexes>
+L<< C<Search::GIN::Extract::AttributeIndexes>|Search::GIN::Extract::AttributeIndexes >>
 
 =head1 AUTHORS
 
@@ -140,7 +143,7 @@ Jesse Luehrs <doy@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric.
+This software is copyright (c) 2014 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

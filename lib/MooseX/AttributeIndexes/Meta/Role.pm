@@ -1,21 +1,19 @@
+use 5.006;    # our, pragmas
 use strict;
 use warnings;
 
 package MooseX::AttributeIndexes::Meta::Role;
-BEGIN {
-  $MooseX::AttributeIndexes::Meta::Role::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $MooseX::AttributeIndexes::Meta::Role::VERSION = '1.0.3';
-}
+
+our $VERSION = '2.000000';
 
 # ABSTRACT: MetaRole for AttributeIndexes.
 
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
 use Moose::Role;
 
-
 sub composition_class_roles {
-  'MooseX::AttributeIndexes::Meta::Role::Composite';
+  return 'MooseX::AttributeIndexes::Meta::Role::Composite';
 }
 
 no Moose::Role;
@@ -26,13 +24,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 MooseX::AttributeIndexes::Meta::Role - MetaRole for AttributeIndexes.
 
 =head1 VERSION
 
-version 1.0.3
+version 2.000000
 
 =head1 METHODS
 
@@ -56,7 +56,7 @@ Jesse Luehrs <doy@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric.
+This software is copyright (c) 2014 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
