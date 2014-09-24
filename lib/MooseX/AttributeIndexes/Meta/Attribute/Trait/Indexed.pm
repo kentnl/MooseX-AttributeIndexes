@@ -10,9 +10,9 @@ our $VERSION = '2.000000';
 
 # AUTHORITY
 
-use Moose::Role;
+use Moose::Role qw( has );
 use Moose::Meta::Attribute::Custom::Trait::Indexed;
-use MooseX::Types::Moose 0.19 qw(:all);
+use MooseX::Types::Moose 0.19 qw( CodeRef Bool );
 use namespace::autoclean 0.08;
 
 =head1 ATTRIBUTES

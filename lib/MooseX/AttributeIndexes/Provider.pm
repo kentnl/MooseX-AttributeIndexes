@@ -10,7 +10,7 @@ our $VERSION = '2.000000';
 
 # AUTHORITY
 
-use Moose::Role;
+use Moose::Role qw( requires );
 use namespace::autoclean;
 
 =head1 SYNOPSIS
