@@ -70,7 +70,7 @@ SYNOPSIS
     want to index that don't behave like they should.
 
    SEE ALSO
-    Search::GIN::Extract::AttributeIndexes
+    "Search::GIN::Extract::AttributeIndexes"
 
 AUTHORS
     *   Kent Fredric <kentnl@cpan.org>
