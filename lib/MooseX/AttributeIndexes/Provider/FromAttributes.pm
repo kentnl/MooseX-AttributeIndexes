@@ -3,6 +3,8 @@ use warnings;
 
 package MooseX::AttributeIndexes::Provider::FromAttributes;
 
+our $VERSION = '2.000000';
+
 # ABSTRACT: A Glue-on-role that provides attribute_indexes data to a class via harvesting attribute traits
 
 # $Id:$

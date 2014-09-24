@@ -2,6 +2,9 @@ use strict;
 use warnings;
 
 package MooseX::AttributeIndexes::Meta::Role::ApplicationToRole;
+
+our $VERSION = '2.000000';
+
 use Moose::Role;
 
 around apply => sub {
