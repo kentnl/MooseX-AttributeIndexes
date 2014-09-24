@@ -22,7 +22,7 @@ around apply => sub {
     role_metaroles => {
       application_to_class => [ 'MooseX::AttributeIndexes::Meta::Role::ApplicationToClass', ],
       application_to_role  => [ 'MooseX::AttributeIndexes::Meta::Role::ApplicationToRole', ],
-    }
+    },
   );
 
   $self->$orig( $role1, $role2 );
