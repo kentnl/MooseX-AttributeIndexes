@@ -20,7 +20,7 @@ $bundle->configure;
 
 my @stopwords = (
   qw(
-      metadata hashref Luehrs MetaRole AttributeIndexes indexable getter Bool CodeRef CODERef accessor tunables
+    metadata hashref Luehrs MetaRole AttributeIndexes indexable getter Bool CodeRef CODERef accessor tunables
     )
 );
 for my $wordlist (@stopwords) {
@@ -29,6 +29,7 @@ for my $wordlist (@stopwords) {
 
 # Fix when possible
 $bundle->remove_policy('Subroutines::ProhibitCallsToUnexportedSubs');
+
 #$bundle->add_or_append_policy_field(
 #  'Subroutines::ProhibitCallsToUndeclaredSubs' => ( 'exempt_subs' => 'Moose::Util::MetaRole::apply_base_class_roles' ), );
 
