@@ -10,6 +10,12 @@ our $VERSION = '2.000000';
 
 # AUTHORITY
 
+sub register_implementation {
+  return 'MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed';
+}
+
+1;
+
 =head1 METHODS
 
 =head2 C<register_implementation>
@@ -17,10 +23,3 @@ our $VERSION = '2.000000';
 Associates the Indexed trait with MX::AI
 
 =cut
-
-sub register_implementation {
-  return 'MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed';
-}
-
-1;
-

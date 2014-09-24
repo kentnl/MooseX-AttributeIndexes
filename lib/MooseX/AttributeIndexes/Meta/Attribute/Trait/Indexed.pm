@@ -15,32 +15,14 @@ use Moose::Meta::Attribute::Custom::Trait::Indexed;
 use MooseX::Types::Moose 0.19 qw( CodeRef Bool );
 use namespace::autoclean 0.08;
 
-=head1 ATTRIBUTES
-
-=head2 C<indexed>
-
-Bool. 0 = This attribute is not/cannot indexed, 1 = This Attribute is/can-be indexed.
-
-CodeRef.  sub{ my( $attribute_meta, $object, $attribute_value ) = @_;  .... return }
-
-=cut
-
-has 'indexed' => (
+has 'primary_index' => (
   is       => 'ro',
   isa      => Bool | CodeRef,    ## no critic (Bangs::ProhibitBitwiseOperators)
   required => 1,
   default  => 0,
 );
 
-=head2 C<primary_index>
-
-Bool. 0 = This attribute is not a primary index, 1 = This Attribute is a primary index.
-
-CodeRef.  sub{ my( $attribute_meta, $object, $attribute_value ) = @_;  .... return }
-
-=cut
-
-has 'primary_index' => (
+has 'indexed' => (
   is       => 'ro',
   isa      => Bool | CodeRef,    ## no critic (Bangs::ProhibitBitwiseOperators)
   required => 1,
@@ -51,3 +33,18 @@ no Moose::Role;
 
 1;
 
+=head1 ATTRIBUTES
+
+=head2 C<indexed>
+
+Bool. 0 = This attribute is not/cannot indexed, 1 = This Attribute is/can-be indexed.
+
+CodeRef.  sub{ my( $attribute_meta, $object, $attribute_value ) = @_;  .... return }
+
+=head2 C<primary_index>
+
+Bool. 0 = This attribute is not a primary index, 1 = This Attribute is a primary index.
+
+CodeRef.  sub{ my( $attribute_meta, $object, $attribute_value ) = @_;  .... return }
+
+=cut

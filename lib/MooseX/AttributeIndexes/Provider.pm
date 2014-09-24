@@ -13,6 +13,12 @@ our $VERSION = '2.000000';
 use Moose::Role qw( requires );
 use namespace::autoclean;
 
+requires 'attribute_indexes';
+
+no Moose::Role;
+
+1;
+
 =head1 SYNOPSIS
 
   use Moose;
@@ -28,8 +34,6 @@ use namespace::autoclean;
 
 This code is alpha, and its interface is prone to change.
 
-=cut
-
 =head1 REQUIRES
 
 =head2 C<attribute_indexes>
@@ -38,10 +42,3 @@ A sub that returns a hashref of index-name=>index-value entries
 for the given object
 
 =cut
-
-requires 'attribute_indexes';
-
-no Moose::Role;
-
-1;
-

@@ -12,12 +12,6 @@ our $VERSION = '2.000000';
 
 use Moose::Role;
 
-=method C<composition_class_roles>
-
-returns C<MooseX::AttributeIndexes::Meta::Role::Composite>
-
-=cut
-
 sub composition_class_roles {
   return 'MooseX::AttributeIndexes::Meta::Role::Composite';
 }
@@ -25,3 +19,9 @@ sub composition_class_roles {
 no Moose::Role;
 
 1;
+
+=method C<composition_class_roles>
+
+returns C<MooseX::AttributeIndexes::Meta::Role::Composite>
+
+=cut
