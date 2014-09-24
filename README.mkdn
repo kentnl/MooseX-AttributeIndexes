@@ -4,7 +4,7 @@ MooseX::AttributeIndexes - Advertise metadata about your Model-Representing Clas
 
 # VERSION
 
-version 2.000000
+version 2.000001
 
 # SYNOPSIS
 
