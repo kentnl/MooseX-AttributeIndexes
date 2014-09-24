@@ -57,6 +57,7 @@ sub attribute_indexes {
   }
   return $k;
 }
+
 1;
 
 __END__
