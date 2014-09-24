@@ -1,4 +1,4 @@
-use 5.006; # our, pragmas
+use 5.006;    # our, pragmas
 use strict;
 use warnings;
 
