@@ -12,7 +12,7 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 use Moose::Role;
 use Scalar::Util qw( blessed reftype );
-use namespace::autoclean;
+use namespace::clean -except => 'meta';
 
 
 

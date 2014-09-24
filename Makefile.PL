@@ -26,7 +26,7 @@ my %WriteMakefileArgs = (
     "Moose::Util::MetaRole" => 0,
     "MooseX::Types::Moose" => "0.19",
     "Scalar::Util" => 0,
-    "namespace::autoclean" => "0.08",
+    "namespace::clean" => 0,
     "strict" => 0,
     "warnings" => 0
   },
@@ -56,7 +56,7 @@ my %FallbackPrereqs = (
   "Test::Moose" => 0,
   "Test::More" => "0.92",
   "lib" => 0,
-  "namespace::autoclean" => "0.08",
+  "namespace::clean" => 0,
   "strict" => 0,
   "warnings" => 0
 );

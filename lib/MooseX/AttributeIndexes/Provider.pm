@@ -11,7 +11,7 @@ our $VERSION = '2.000000';
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 use Moose::Role qw( requires );
-use namespace::autoclean;
+use namespace::clean -except => 'meta';
 
 requires 'attribute_indexes';
 
