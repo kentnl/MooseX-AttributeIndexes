@@ -27,7 +27,7 @@ use namespace::autoclean 0.08;
 
 has 'indexed' => (
   is       => 'ro',
-  isa      => Bool | CodeRef,
+  isa      => Bool | CodeRef,    ## no critic (Bangs::ProhibitBitwiseOperators)
   required => 1,
   default  => 0,
 );
@@ -42,7 +42,7 @@ has 'indexed' => (
 
 has 'primary_index' => (
   is       => 'ro',
-  isa      => Bool | CodeRef,
+  isa      => Bool | CodeRef,    ## no critic (Bangs::ProhibitBitwiseOperators)
   required => 1,
   default  => 0,
 );
