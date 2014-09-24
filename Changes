@@ -1,6 +1,6 @@
 Revision history for MooseX-AttributeIndexes
 
-2.000000 2014-09-24T05:14:29Z
+2.000000 2014-09-24T05:19:25Z
  [00 Major - Toolkit]
  - This may break a hand-operated downstream.
  - Migrated from using Module::Build as an installer to using EUMM
