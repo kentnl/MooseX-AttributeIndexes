@@ -2,7 +2,6 @@ use strict;
 use warnings;
 
 package MooseX::AttributeIndexes::Meta::Role::Composite;
-$MooseX::AttributeIndexes::Meta::Role::Composite::VERSION = '2.000000';
 use Moose::Role;
 
 around apply_params => sub {

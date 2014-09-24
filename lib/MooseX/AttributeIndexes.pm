@@ -2,7 +2,9 @@ use strict;
 use warnings;
 
 package MooseX::AttributeIndexes;
-$MooseX::AttributeIndexes::VERSION = '2.000000';
+
+our $VERSION = '2.000000';
+
 # ABSTRACT: Advertise metadata about your Model-Representing Classes to Any Database tool.
 use Moose 0.94 ();
 

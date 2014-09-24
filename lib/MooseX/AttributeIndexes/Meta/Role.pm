@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 package MooseX::AttributeIndexes::Meta::Role;
-$MooseX::AttributeIndexes::Meta::Role::VERSION = '2.000000';
+
 # ABSTRACT: MetaRole for AttributeIndexes.
 
 use Moose::Role;

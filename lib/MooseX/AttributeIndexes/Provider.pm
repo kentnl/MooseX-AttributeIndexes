@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 package MooseX::AttributeIndexes::Provider;
-$MooseX::AttributeIndexes::Provider::VERSION = '2.000000';
+
 # ABSTRACT: A role that advertises an object is capable of providing metadata.
 
 # $Id:$

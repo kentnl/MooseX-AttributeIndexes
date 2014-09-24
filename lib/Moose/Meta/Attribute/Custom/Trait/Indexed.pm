@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 package Moose::Meta::Attribute::Custom::Trait::Indexed;
-$Moose::Meta::Attribute::Custom::Trait::Indexed::VERSION = '2.000000';
+
 # ABSTRACT: Registration Node for the Indexed Trait.
 
 
