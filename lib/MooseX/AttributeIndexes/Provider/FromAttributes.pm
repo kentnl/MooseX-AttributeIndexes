@@ -7,7 +7,8 @@ our $VERSION = '2.000000';
 
 # ABSTRACT: A Glue-on-role that provides attribute_indexes data to a class via harvesting attribute traits
 
-# $Id:$
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
 use Moose::Role;
 use Scalar::Util qw( blessed reftype );
 use namespace::autoclean;

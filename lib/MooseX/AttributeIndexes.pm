@@ -6,6 +6,9 @@ package MooseX::AttributeIndexes;
 our $VERSION = '2.000000';
 
 # ABSTRACT: Advertise metadata about your Model-Representing Classes to Any Database tool.
+
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
 use Moose 0.94 ();
 
 use Moose::Exporter;

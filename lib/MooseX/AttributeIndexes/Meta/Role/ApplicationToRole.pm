@@ -5,6 +5,10 @@ package MooseX::AttributeIndexes::Meta::Role::ApplicationToRole;
 
 our $VERSION = '2.000000';
 
+# ABSTRACT: Give a role indexable attributes
+
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
 use Moose::Role;
 
 around apply => sub {
@@ -35,7 +39,7 @@ __END__
 
 =head1 NAME
 
-MooseX::AttributeIndexes::Meta::Role::ApplicationToRole
+MooseX::AttributeIndexes::Meta::Role::ApplicationToRole - Give a role indexable attributes
 
 =head1 VERSION
 

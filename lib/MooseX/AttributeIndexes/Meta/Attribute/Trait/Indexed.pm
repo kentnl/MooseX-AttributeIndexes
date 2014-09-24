@@ -7,6 +7,8 @@ our $VERSION = '2.000000';
 
 # ABSTRACT: A Trait for attributes which permits various indexing tunables
 
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
 use Moose::Role;
 use Moose::Meta::Attribute::Custom::Trait::Indexed;
 use MooseX::Types::Moose 0.19 qw(:all);

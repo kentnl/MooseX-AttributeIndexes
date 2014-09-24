@@ -5,6 +5,10 @@ package MooseX::AttributeIndexes::Meta::Role::Composite;
 
 our $VERSION = '2.000000';
 
+# ABSTRACT: Give a either a class or role indexable attributes.
+
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
 use Moose::Role;
 
 around apply_params => sub {
@@ -36,7 +40,7 @@ __END__
 
 =head1 NAME
 
-MooseX::AttributeIndexes::Meta::Role::Composite
+MooseX::AttributeIndexes::Meta::Role::Composite - Give a either a class or role indexable attributes.
 
 =head1 VERSION
 

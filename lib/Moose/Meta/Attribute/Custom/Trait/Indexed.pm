@@ -7,6 +7,8 @@ our $VERSION = '2.000000';
 
 # ABSTRACT: Registration Node for the Indexed Trait.
 
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
 
 
 

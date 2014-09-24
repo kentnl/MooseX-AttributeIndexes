@@ -7,6 +7,8 @@ our $VERSION = '2.000000';
 
 # ABSTRACT: MetaRole for AttributeIndexes.
 
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
 use Moose::Role;
 
 
