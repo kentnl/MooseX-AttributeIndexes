@@ -4,7 +4,7 @@ MooseX::AttributeIndexes - Advertise metadata about your Model-Representing Clas
 
 # VERSION
 
-version 1.0.3
+version 2.000000
 
 # SYNOPSIS
 
@@ -77,7 +77,7 @@ don't behave like they should.
 
 ### SEE ALSO
 
-[Search::GIN::Extract::AttributeIndexes](http://search.cpan.org/perldoc?Search::GIN::Extract::AttributeIndexes)
+[Search::GIN::Extract::AttributeIndexes](https://metacpan.org/pod/Search::GIN::Extract::AttributeIndexes)
 
 # AUTHORS
 
@@ -86,7 +86,7 @@ don't behave like they should.
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric.
+This software is copyright (c) 2014 by Kent Fredric.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
