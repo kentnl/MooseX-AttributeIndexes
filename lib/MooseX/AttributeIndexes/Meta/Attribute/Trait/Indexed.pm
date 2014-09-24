@@ -4,7 +4,7 @@ use warnings;
 
 package MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed;
 
-our $VERSION = '2.000000';
+our $VERSION = '2.000001';
 
 # ABSTRACT: A Trait for attributes which permits various indexing tunables
 

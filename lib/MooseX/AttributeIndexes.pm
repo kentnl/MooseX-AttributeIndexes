@@ -4,7 +4,7 @@ use warnings;
 
 package MooseX::AttributeIndexes;
 
-our $VERSION = '2.000000';
+our $VERSION = '2.000001';
 
 # ABSTRACT: Advertise metadata about your Model-Representing Classes to Any Database tool.
 
