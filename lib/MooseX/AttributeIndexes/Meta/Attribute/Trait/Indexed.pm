@@ -27,7 +27,7 @@ CodeRef.  sub{ my( $attribute_meta, $object, $attribute_value ) = @_;  .... retu
 
 has 'indexed' => (
   is       => 'ro',
-  isa      => Bool | CodeRef,
+  isa      => Bool | CodeRef,    ## no critic (Bangs::ProhibitBitwiseOperators)
   required => 1,
   default  => 0,
 );
@@ -42,7 +42,7 @@ CodeRef.  sub{ my( $attribute_meta, $object, $attribute_value ) = @_;  .... retu
 
 has 'primary_index' => (
   is       => 'ro',
-  isa      => Bool | CodeRef,
+  isa      => Bool | CodeRef,    ## no critic (Bangs::ProhibitBitwiseOperators)
   required => 1,
   default  => 0,
 );
