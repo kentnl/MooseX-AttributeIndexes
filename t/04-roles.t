@@ -22,8 +22,7 @@ use Test::More;
   package Consumee;
   use Moose;
 
-  with #
-    'Consumee::Role';
+  with @{ ['Consumee::Role'] };
 }
 
 {
@@ -31,8 +30,7 @@ use Test::More;
   package Consumer::Role;
   use Moose::Role;
 
-  with # 
-    'Consumee::Role';
+  with @{ ['Consumee::Role'] };
 }
 
 {
@@ -40,8 +38,7 @@ use Test::More;
   package Consumer;
   use Moose;
 
-  with #
-    'Consumer::Role';
+  with @{ ['Consumer::Role'] };
 }
 
 {
@@ -55,8 +52,7 @@ use Test::More;
   package Baz;
   use Moose;
 
-  with #
-    'Consumee::Role', 'Empty::Role';
+  with @{ [ 'Consumee::Role', 'Empty::Role' ] };
 }
 
 is_deeply( Consumee->new( bar => "BAR" )->attribute_indexes, { bar => "BAR" }, "application to class works" );

@@ -4,8 +4,6 @@ author:
   - 'Kent Fredric <kentnl@cpan.org>'
   - 'Jesse Luehrs <doy@cpan.org>'
 build_requires:
-  Consumee::Role: '0'
-  Consumer::Role: '0'
   ExtUtils::MakeMaker: '0'
   File::Spec: '0'
   Test::Moose: '0'
@@ -65,9 +63,6 @@ resources:
   repository: https://github.com/kentnl/MooseX-AttributeIndexes.git
 version: '2.000000'
 x_BuiltWith:
-  failures:
-    Consumee::Role: 'module was not found in INC'
-    Consumer::Role: 'module was not found in INC'
   modules:
     CPAN::Meta: '2.142060'
     Dist::Zilla::App::Command::bakeini: '0.001002'
