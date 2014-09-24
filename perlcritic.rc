@@ -88,7 +88,7 @@ allow_includes = 1
 
 [CodeLayout::RequireTrailingCommas]
 
-[CodeLayout::RequireUseUTF8]
+[-CodeLayout::RequireUseUTF8]
 
 [Compatibility::ConstantLeadingUnderscore]
 
@@ -126,6 +126,7 @@ allow_includes = 1
 
 [Documentation::PodSpelling]
 spell_command = aspell list --lang en_US
+stop_words = metadata hashref Luehrs MetaRole AttributeIndexes indexable getter Bool CodeRef CODERef accessor tunables
 
 [Documentation::ProhibitAdjacentLinks]
 
@@ -312,7 +313,7 @@ allowed_pragmata = diagnostics feature perlversion strict warnings utf8
 
 [Subroutines::ProhibitCallsToUndeclaredSubs]
 
-[Subroutines::ProhibitCallsToUnexportedSubs]
+[-Subroutines::ProhibitCallsToUnexportedSubs]
 
 [Subroutines::ProhibitExcessComplexity]
 
