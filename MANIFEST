@@ -45,6 +45,7 @@ t/03-callback.t
 t/04-roles.t
 t/lib/Example.pm
 t/lib/Example2.pm
+weaver.ini
 xt/author/critic.t
 xt/release/cpan-changes.t
 xt/release/distmeta.t
