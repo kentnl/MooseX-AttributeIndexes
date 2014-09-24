@@ -312,6 +312,7 @@ allowed_pragmata = diagnostics feature perlversion strict warnings utf8
 [Subroutines::ProhibitBuiltinHomonyms]
 
 [Subroutines::ProhibitCallsToUndeclaredSubs]
+exempt_subs = Moose::Util::MetaRole::apply_base_class_roles Moose::Util::MetaRole::apply_metaroles
 
 [Subroutines::ProhibitCallsToUnexportedSubs]
 

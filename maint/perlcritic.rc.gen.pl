@@ -20,15 +20,18 @@ $bundle->configure;
 
 my @stopwords = (
   qw(
-      metadata hashref Luehrs MetaRole AttributeIndexes indexable getter Bool CodeRef CODERef accessor tunables
+    metadata hashref Luehrs MetaRole AttributeIndexes indexable getter Bool CodeRef CODERef accessor tunables
     )
 );
 for my $wordlist (@stopwords) {
   $bundle->add_or_append_policy_field( 'Documentation::PodSpelling' => ( 'stop_words' => $wordlist ) );
 }
 
-#$bundle->add_or_append_policy_field(
-#  'Subroutines::ProhibitCallsToUndeclaredSubs' => ( 'exempt_subs' => 'String::Formatter::str_rf' ), );
+$bundle->add_or_append_policy_field(
+  'Subroutines::ProhibitCallsToUndeclaredSubs' => ( 'exempt_subs' => 'Moose::Util::MetaRole::apply_base_class_roles' ), );
+$bundle->add_or_append_policy_field(
+  'Subroutines::ProhibitCallsToUndeclaredSubs' => ( 'exempt_subs' => 'Moose::Util::MetaRole::apply_metaroles' ), );
+
 
 $bundle->remove_policy('ErrorHandling::RequireUseOfExceptions');
 $bundle->remove_policy('CodeLayout::RequireUseUTF8');
