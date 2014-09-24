@@ -4,7 +4,7 @@ use warnings;
 
 package MooseX::AttributeIndexes::Meta::Role::ApplicationToClass;
 
-our $VERSION = '2.000000';
+our $VERSION = '2.000001';
 
 # ABSTRACT: Make a class have indexable attributes.
 
@@ -41,7 +41,7 @@ MooseX::AttributeIndexes::Meta::Role::ApplicationToClass - Make a class have ind
 
 =head1 VERSION
 
-version 2.000000
+version 2.000001
 
 =head1 AUTHORS
 
