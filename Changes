@@ -23,6 +23,7 @@ Revision history for {{$dist->name}}
 
  [Metadata]
  - Add email address to copyright.
+ - Recognise 2x Contributors.
 
  [Tests]
  - Use Test::Compile::PerFile instead of Test::Compile
