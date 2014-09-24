@@ -13,6 +13,7 @@ mantissa     = 6
 srcreadme    = mkdn
 toolkit      = eumm
 toolkit_hardness = soft
+copyfiles        = LICENSE
 
 ;version_major  = 0
 ;version_minor  = 1
