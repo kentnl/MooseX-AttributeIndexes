@@ -151,13 +151,13 @@
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/kentfredric/MooseX-AttributeIndexes/issues"
+         "web" : "https://github.com/kentnl/MooseX-AttributeIndexes/issues"
       },
-      "homepage" : "https://github.com/kentfredric/MooseX-AttributeIndexes",
+      "homepage" : "https://github.com/kentnl/MooseX-AttributeIndexes",
       "repository" : {
          "type" : "git",
-         "url" : "https://github.com/kentfredric/MooseX-AttributeIndexes.git",
-         "web" : "https://github.com/kentfredric/MooseX-AttributeIndexes"
+         "url" : "https://github.com/kentnl/MooseX-AttributeIndexes.git",
+         "web" : "https://github.com/kentnl/MooseX-AttributeIndexes"
       }
    },
    "version" : "2.000000",

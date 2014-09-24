@@ -58,9 +58,9 @@ requires:
   strict: '0'
   warnings: '0'
 resources:
-  bugtracker: https://github.com/kentfredric/MooseX-AttributeIndexes/issues
-  homepage: https://github.com/kentfredric/MooseX-AttributeIndexes
-  repository: https://github.com/kentfredric/MooseX-AttributeIndexes.git
+  bugtracker: https://github.com/kentnl/MooseX-AttributeIndexes/issues
+  homepage: https://github.com/kentnl/MooseX-AttributeIndexes
+  repository: https://github.com/kentnl/MooseX-AttributeIndexes.git
 version: '2.000000'
 x_BuiltWith:
   modules:
