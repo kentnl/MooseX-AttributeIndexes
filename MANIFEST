@@ -21,10 +21,12 @@ lib/MooseX/AttributeIndexes/Meta/Role/ApplicationToRole.pm
 lib/MooseX/AttributeIndexes/Meta/Role/Composite.pm
 lib/MooseX/AttributeIndexes/Provider.pm
 lib/MooseX/AttributeIndexes/Provider/FromAttributes.pm
+maint/perlcritic.rc.gen.pl
 misc/Changes.deps
 misc/Changes.deps.all
 misc/Changes.deps.dev
 misc/Changes.deps.opt
+misc/perlcritic.deps
 perlcritic.rc
 t/00-compile/lib_MooseX_AttributeIndexes_Meta_Attribute_Trait_Indexed_pm.t
 t/00-compile/lib_MooseX_AttributeIndexes_Meta_Role_ApplicationToClass_pm.t

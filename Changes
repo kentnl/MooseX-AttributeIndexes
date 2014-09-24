@@ -1,6 +1,6 @@
 Revision history for MooseX-AttributeIndexes
 
-2.000000 2014-09-24T04:07:44Z
+2.000000 2014-09-24T04:14:11Z
  [00 Major - Toolkit]
  - This may break a hand-operated downstream.
  - Migrated from using Module::Build as an installer to using EUMM
@@ -24,6 +24,7 @@ Revision history for MooseX-AttributeIndexes
  [Metadata]
  - Add email address to copyright.
  - Recognise 2x Contributors.
+ - Migrate to github/kentnl
 
  [Tests]
  - Use Test::Compile::PerFile instead of Test::Compile
