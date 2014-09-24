@@ -10,6 +10,7 @@ our $VERSION = '2.000000';
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
+## no critic (Moose::RequireCleanNamespace,Moose::RequireMakeImmutable)
 use Moose 0.94 ();
 
 use Moose::Exporter;

@@ -41,6 +41,8 @@ use namespace::autoclean;
 
 requires 'attribute_indexes';
 
+no Moose::Role;
+
 1;
 
 __END__

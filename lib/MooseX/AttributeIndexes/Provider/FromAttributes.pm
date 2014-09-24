@@ -58,6 +58,8 @@ sub attribute_indexes {
   return $k;
 }
 
+no Moose::Role;
+
 1;
 
 __END__
