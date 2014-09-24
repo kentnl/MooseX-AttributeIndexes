@@ -10,7 +10,6 @@ our $VERSION = '2.000000';
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
-## no critic (Moose::RequireCleanNamespace Moose::RequireMakeImmutable)
 use Moose 0.94 ();
 
 use Moose::Exporter;
@@ -112,6 +111,8 @@ Moose::Exporter->setup_import_methods(
   },
   base_class_roles => [ 'MooseX::AttributeIndexes::Provider', 'MooseX::AttributeIndexes::Provider::FromAttributes', ],
 );
+
+## no critic (Moose::RequireCleanNamespace Moose::RequireMakeImmutable)
 
 1;
 
