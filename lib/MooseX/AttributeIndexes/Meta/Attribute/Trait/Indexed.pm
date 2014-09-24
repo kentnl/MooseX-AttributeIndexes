@@ -15,32 +15,14 @@ use Moose::Meta::Attribute::Custom::Trait::Indexed;
 use MooseX::Types::Moose 0.19 qw( CodeRef Bool );
 use namespace::autoclean 0.08;
 
-
-
-
-
-
-
-
-
-
-
-has 'indexed' => (
+has 'primary_index' => (
   is       => 'ro',
   isa      => Bool | CodeRef,    ## no critic (Bangs::ProhibitBitwiseOperators)
   required => 1,
   default  => 0,
 );
 
-
-
-
-
-
-
-
-
-has 'primary_index' => (
+has 'indexed' => (
   is       => 'ro',
   isa      => Bool | CodeRef,    ## no critic (Bangs::ProhibitBitwiseOperators)
   required => 1,

@@ -13,32 +13,6 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 use Moose::Role qw( requires );
 use namespace::autoclean;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 requires 'attribute_indexes';
 
 no Moose::Role;

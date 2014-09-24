@@ -12,12 +12,6 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 use Moose::Role;
 
-
-
-
-
-
-
 sub composition_class_roles {
   return 'MooseX::AttributeIndexes::Meta::Role::Composite';
 }

@@ -10,14 +10,6 @@ our $VERSION = '2.000000';
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
-
-
-
-
-
-
-
-
 sub register_implementation {
   return 'MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed';
 }
