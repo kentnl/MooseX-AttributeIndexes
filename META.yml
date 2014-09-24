@@ -2,7 +2,6 @@
 abstract: 'Advertise metadata about your Model-Representing Classes to Any Database tool.'
 author:
   - 'Kent Fredric <kentnl@cpan.org>'
-  - 'Jesse Luehrs <doy@cpan.org>'
 build_requires:
   ExtUtils::MakeMaker: '0'
   File::Spec: '0'
@@ -641,4 +640,3 @@ x_authority: cpan:KENTNL
 x_contributors:
   - 'Gerhard Gossen <gerhard.gossen@googlemail.com>'
   - 'Jesse Luehrs <doy@tozt.net>'
-  - 'Kent Fredric <kentfredric+gravitar@gmail.com>'

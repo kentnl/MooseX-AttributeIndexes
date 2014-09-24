@@ -1,8 +1,7 @@
 {
    "abstract" : "Advertise metadata about your Model-Representing Classes to Any Database tool.",
    "author" : [
-      "Kent Fredric <kentnl@cpan.org>",
-      "Jesse Luehrs <doy@cpan.org>"
+      "Kent Fredric <kentnl@cpan.org>"
    ],
    "dynamic_config" : 0,
    "generated_by" : "Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.142060",
@@ -894,7 +893,6 @@
    "x_authority" : "cpan:KENTNL",
    "x_contributors" : [
       "Gerhard Gossen <gerhard.gossen@googlemail.com>",
-      "Jesse Luehrs <doy@tozt.net>",
-      "Kent Fredric <kentfredric+gravitar@gmail.com>"
+      "Jesse Luehrs <doy@tozt.net>"
    ]
 }

@@ -1,6 +1,6 @@
 Revision history for MooseX-AttributeIndexes
 
-2.000000 2014-09-24T03:53:33Z
+2.000000 2014-09-24T03:55:52Z
  [00 Major - Toolkit]
  - This may break a hand-operated downstream.
  - Migrated from using Module::Build as an installer to using EUMM
@@ -20,6 +20,9 @@ Revision history for MooseX-AttributeIndexes
  - develop: +46 -2 (recommends: -1, suggests: +1 ↑1)
  - runtime: ↓1
  - test: +3 ↓1 -2 (recommends: +3)
+
+ [Metadata]
+ - Add email address to copyright.
 
  [Tests]
  - Use Test::Compile::PerFile instead of Test::Compile

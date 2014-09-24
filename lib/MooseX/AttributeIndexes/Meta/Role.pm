@@ -45,19 +45,9 @@ version 2.000000
 
 returns C<MooseX::AttributeIndexes::Meta::Role::Composite>
 
-=head1 AUTHORS
-
-=over 4
-
-=item *
+=head1 AUTHOR
 
 Kent Fredric <kentnl@cpan.org>
-
-=item *
-
-Jesse Luehrs <doy@cpan.org>
-
-=back
 
 =head1 COPYRIGHT AND LICENSE
 

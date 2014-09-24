@@ -72,10 +72,8 @@ SYNOPSIS
    SEE ALSO
     Search::GIN::Extract::AttributeIndexes
 
-AUTHORS
-    *   Kent Fredric <kentnl@cpan.org>
-
-    *   Jesse Luehrs <doy@cpan.org>
+AUTHOR
+    Kent Fredric <kentnl@cpan.org>
 
 COPYRIGHT AND LICENSE
     This software is copyright (c) 2014 by Kent Fredric

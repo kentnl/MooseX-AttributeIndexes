@@ -42,19 +42,9 @@ MooseX::AttributeIndexes::Meta::Role::ApplicationToClass - Make a class have ind
 
 version 2.000000
 
-=head1 AUTHORS
-
-=over 4
-
-=item *
+=head1 AUTHOR
 
 Kent Fredric <kentnl@cpan.org>
-
-=item *
-
-Jesse Luehrs <doy@cpan.org>
-
-=back
 
 =head1 COPYRIGHT AND LICENSE
 

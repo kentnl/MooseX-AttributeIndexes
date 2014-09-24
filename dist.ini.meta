@@ -1,6 +1,5 @@
 name    = MooseX-AttributeIndexes
 author  = Kent Fredric <kentnl@cpan.org>
-author  = Jesse Luehrs <doy@cpan.org>
 license = Perl_5
 copyright_holder = Kent Fredric <kentfredric@gmail.com>
 
