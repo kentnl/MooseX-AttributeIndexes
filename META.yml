@@ -22,31 +22,31 @@ name: MooseX-AttributeIndexes
 provides:
   Moose::Meta::Attribute::Custom::Trait::Indexed:
     file: lib/Moose/Meta/Attribute/Custom/Trait/Indexed.pm
-    version: '1.000004'
+    version: '2.000000'
   MooseX::AttributeIndexes:
     file: lib/MooseX/AttributeIndexes.pm
-    version: '1.000004'
+    version: '2.000000'
   MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed:
     file: lib/MooseX/AttributeIndexes/Meta/Attribute/Trait/Indexed.pm
-    version: '1.000004'
+    version: '2.000000'
   MooseX::AttributeIndexes::Meta::Role:
     file: lib/MooseX/AttributeIndexes/Meta/Role.pm
-    version: '1.000004'
+    version: '2.000000'
   MooseX::AttributeIndexes::Meta::Role::ApplicationToClass:
     file: lib/MooseX/AttributeIndexes/Meta/Role/ApplicationToClass.pm
-    version: '1.000004'
+    version: '2.000000'
   MooseX::AttributeIndexes::Meta::Role::ApplicationToRole:
     file: lib/MooseX/AttributeIndexes/Meta/Role/ApplicationToRole.pm
-    version: '1.000004'
+    version: '2.000000'
   MooseX::AttributeIndexes::Meta::Role::Composite:
     file: lib/MooseX/AttributeIndexes/Meta/Role/Composite.pm
-    version: '1.000004'
+    version: '2.000000'
   MooseX::AttributeIndexes::Provider:
     file: lib/MooseX/AttributeIndexes/Provider.pm
-    version: '1.000004'
+    version: '2.000000'
   MooseX::AttributeIndexes::Provider::FromAttributes:
     file: lib/MooseX/AttributeIndexes/Provider/FromAttributes.pm
-    version: '1.000004'
+    version: '2.000000'
 requires:
   Moose: '0.94'
   Moose::Exporter: '0'
@@ -62,7 +62,7 @@ resources:
   bugtracker: https://github.com/kentfredric/MooseX-AttributeIndexes/issues
   homepage: https://github.com/kentfredric/MooseX-AttributeIndexes
   repository: https://github.com/kentfredric/MooseX-AttributeIndexes.git
-version: '1.000004'
+version: '2.000000'
 x_BuiltWith:
   modules:
     CPAN::Meta: '2.142060'
@@ -480,7 +480,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: '0'
-          tag: 1.000004-source
+          tag: 2.000000-source
           tag_format: '%v-source'
           tag_message: v%v
           time_zone: local
@@ -530,7 +530,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: releases
           signed: '0'
-          tag: '1.000004'
+          tag: '2.000000'
           tag_format: '%v'
           tag_message: v%v
           time_zone: local

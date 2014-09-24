@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 package MooseX::AttributeIndexes::Provider::FromAttributes;
-$MooseX::AttributeIndexes::Provider::FromAttributes::VERSION = '1.000004';
+$MooseX::AttributeIndexes::Provider::FromAttributes::VERSION = '2.000000';
 # ABSTRACT: A Glue-on-role that provides attribute_indexes data to a class via harvesting attribute traits
 
 # $Id:$
@@ -67,7 +67,7 @@ MooseX::AttributeIndexes::Provider::FromAttributes - A Glue-on-role that provide
 
 =head1 VERSION
 
-version 1.000004
+version 2.000000
 
 =head1 METHODS
 

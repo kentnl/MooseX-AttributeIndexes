@@ -19,7 +19,7 @@ my %module_build_args = (
     "Jesse Luehrs <doy\@cpan.org>"
   ],
   "dist_name" => "MooseX-AttributeIndexes",
-  "dist_version" => "1.000004",
+  "dist_version" => "2.000000",
   "license" => "perl",
   "module_name" => "MooseX::AttributeIndexes",
   "recommends" => {},

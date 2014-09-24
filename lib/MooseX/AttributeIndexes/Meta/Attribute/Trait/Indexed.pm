@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 package MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed;
-$MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed::VERSION = '1.000004';
+$MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed::VERSION = '2.000000';
 # ABSTRACT: A Trait for attributes which permits various indexing tunables
 
 use Moose::Role;
@@ -56,7 +56,7 @@ MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed - A Trait for attribut
 
 =head1 VERSION
 
-version 1.000004
+version 2.000000
 
 =head1 ATTRIBUTES
 

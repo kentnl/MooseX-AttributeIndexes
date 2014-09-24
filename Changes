@@ -1,6 +1,6 @@
 Revision history for MooseX-AttributeIndexes
 
-1.000004 2014-09-24T03:22:16Z
+2.000000 2014-09-24T03:22:16Z
  [Dependencies::Stats]
  - Dependencies changed since 1.0.3, see misc/*.deps* for details
  - build: ↑1

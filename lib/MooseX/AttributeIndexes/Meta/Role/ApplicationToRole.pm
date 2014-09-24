@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 package MooseX::AttributeIndexes::Meta::Role::ApplicationToRole;
-$MooseX::AttributeIndexes::Meta::Role::ApplicationToRole::VERSION = '1.000004';
+$MooseX::AttributeIndexes::Meta::Role::ApplicationToRole::VERSION = '2.000000';
 use Moose::Role;
 
 around apply => sub {
@@ -37,7 +37,7 @@ MooseX::AttributeIndexes::Meta::Role::ApplicationToRole
 
 =head1 VERSION
 
-version 1.000004
+version 2.000000
 
 =head1 AUTHORS
 

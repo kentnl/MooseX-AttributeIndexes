@@ -9,6 +9,7 @@ META.json
 META.yml
 README
 dist.ini
+dist.ini.meta
 lib/Moose/Meta/Attribute/Custom/Trait/Indexed.pm
 lib/MooseX/AttributeIndexes.pm
 lib/MooseX/AttributeIndexes/Meta/Attribute/Trait/Indexed.pm
