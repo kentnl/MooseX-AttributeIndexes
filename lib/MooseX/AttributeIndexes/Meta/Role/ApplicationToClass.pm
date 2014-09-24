@@ -5,6 +5,10 @@ package MooseX::AttributeIndexes::Meta::Role::ApplicationToClass;
 
 our $VERSION = '2.000000';
 
+# ABSTRACT: Make a class have indexable attributes.
+
+# AUTHORITY
+
 use Moose::Role;
 
 around apply => sub {

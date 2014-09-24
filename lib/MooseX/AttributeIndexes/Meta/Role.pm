@@ -7,6 +7,8 @@ our $VERSION = '2.000000';
 
 # ABSTRACT: MetaRole for AttributeIndexes.
 
+# AUTHORITY
+
 use Moose::Role;
 
 =method C<composition_class_roles>

@@ -7,6 +7,8 @@ our $VERSION = '2.000000';
 
 # ABSTRACT: Registration Node for the Indexed Trait.
 
+# AUTHORITY
+
 =head1 METHODS
 
 =head2 C<register_implementation>

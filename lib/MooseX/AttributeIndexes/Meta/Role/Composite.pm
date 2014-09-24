@@ -5,6 +5,10 @@ package MooseX::AttributeIndexes::Meta::Role::Composite;
 
 our $VERSION = '2.000000';
 
+# ABSTRACT: Give a either a class or role indexable attributes.
+
+# AUTHORITY
+
 use Moose::Role;
 
 around apply_params => sub {
