@@ -12,7 +12,7 @@ our $VERSION = '2.000000';
 
 use Moose::Role;
 use Scalar::Util qw( blessed reftype );
-use namespace::autoclean;
+use namespace::clean -except => 'meta';
 
 =head1 METHODS
 

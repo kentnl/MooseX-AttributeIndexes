@@ -13,7 +13,7 @@ our $VERSION = '2.000000';
 use Moose::Role qw( has );
 use Moose::Meta::Attribute::Custom::Trait::Indexed;
 use MooseX::Types::Moose 0.19 qw( CodeRef Bool );
-use namespace::autoclean 0.08;
+use namespace::clean -except => 'meta';
 
 has 'primary_index' => (
   is       => 'ro',

@@ -18,8 +18,11 @@ Revision history for {{$dist->name}}
  - build: -1
  - configure: +1 -1 (recommends: +1)
  - develop: +46 -2 (recommends: -1, suggests: +1 ↑1)
- - runtime: ↓1
+ - runtime: +1 ↓1 -1
  - test: +3 ↓1 -2 (recommends: +3)
+
+ [Internals]
+ - use namespace::clean instead of autoclean.
 
  [Metadata]
  - Add email address to copyright.
