@@ -202,7 +202,7 @@ don't behave like they should.
 
 =head3 SEE ALSO
 
-L<Search::GIN::Extract::AttributeIndexes>
+L<< Search::GIN::Extract::AttributeIndexes >>
 
 =head1 AUTHORS
 
