@@ -76,9 +76,19 @@ Bool. 0 = This attribute is not a primary index, 1 = This Attribute is a primary
 
 CodeRef.  sub{ my( $attribute_meta, $object, $attribute_value ) = @_;  .... return }
 
-=head1 AUTHOR
+=head1 AUTHORS
+
+=over 4
+
+=item *
 
 Kent Fredric <kentnl@cpan.org>
+
+=item *
+
+Jesse Luehrs <doy@cpan.org>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 

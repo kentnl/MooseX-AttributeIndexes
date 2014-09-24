@@ -82,9 +82,19 @@ C<indexed> and C<primary_index> keys and returns a hashref of
 
 key->value pairs ( circumventing the getter )
 
-=head1 AUTHOR
+=head1 AUTHORS
+
+=over 4
+
+=item *
 
 Kent Fredric <kentnl@cpan.org>
+
+=item *
+
+Jesse Luehrs <doy@cpan.org>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 

@@ -11,7 +11,7 @@ use ExtUtils::MakeMaker ;
 
 my %WriteMakefileArgs = (
   "ABSTRACT" => "Advertise metadata about your Model-Representing Classes to Any Database tool.",
-  "AUTHOR" => "Kent Fredric <kentnl\@cpan.org>",
+  "AUTHOR" => "Kent Fredric <kentnl\@cpan.org>, Jesse Luehrs <doy\@cpan.org>",
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0
   },
