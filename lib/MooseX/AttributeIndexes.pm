@@ -94,7 +94,7 @@ don't behave like they should.
 
 =head3 SEE ALSO
 
-L<Search::GIN::Extract::AttributeIndexes>
+L<< C<Search::GIN::Extract::AttributeIndexes>|Search::GIN::Extract::AttributeIndexes >>
 
 =cut
 

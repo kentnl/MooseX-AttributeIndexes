@@ -77,7 +77,7 @@ don't behave like they should.
 
 ### SEE ALSO
 
-[Search::GIN::Extract::AttributeIndexes](https://metacpan.org/pod/Search::GIN::Extract::AttributeIndexes)
+[`Search::GIN::Extract::AttributeIndexes`](https://metacpan.org/pod/Search::GIN::Extract::AttributeIndexes)
 
 # AUTHORS
 
