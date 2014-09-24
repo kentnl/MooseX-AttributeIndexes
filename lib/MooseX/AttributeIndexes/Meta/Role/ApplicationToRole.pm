@@ -15,17 +15,19 @@ use Moose::Role qw( around );
 around apply => sub {
   my $orig = shift;
   my $self = shift;
-  my ( $role1, $role2 ) = @_;
+  my ( $consumee, $consumer ) = @_;
 
-  $role2 = Moose::Util::MetaRole::apply_metaroles(
-    for            => $role2,
+  # applying $consumee to $consumer, $consumee has AttributeIndexes.
+  # -> $consumer inherits indexable attributes.
+  $consumer = Moose::Util::MetaRole::apply_metaroles(
+    for            => $consumer,
     role_metaroles => {
       application_to_class => [ 'MooseX::AttributeIndexes::Meta::Role::ApplicationToClass', ],
       application_to_role  => [ 'MooseX::AttributeIndexes::Meta::Role::ApplicationToRole', ],
-    }
+    },
   );
 
-  $self->$orig( $role1, $role2 );
+  $self->$orig( $consumee, $consumer );
 };
 
 no Moose::Role;

@@ -115,8 +115,6 @@ Moose::Exporter->setup_import_methods(
   base_class_roles => [ 'MooseX::AttributeIndexes::Provider', 'MooseX::AttributeIndexes::Provider::FromAttributes', ],
 );
 
-## no critic (Moose::RequireCleanNamespace Moose::RequireMakeImmutable)
-
 1;
 
 __END__

@@ -102,6 +102,7 @@
             "Test::More" : "1.001006"
          },
          "requires" : {
+            "Consumee::Role" : "0",
             "ExtUtils::MakeMaker" : "0",
             "File::Spec" : "0",
             "Test::Moose" : "0",
@@ -162,6 +163,9 @@
    },
    "version" : "2.000000",
    "x_BuiltWith" : {
+      "failures" : {
+         "Consumee::Role" : "module was not found in INC"
+      },
       "modules" : {
          "CPAN::Meta" : "2.142060",
          "Dist::Zilla::App::Command::bakeini" : "0.001002",

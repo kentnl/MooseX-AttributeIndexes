@@ -86,6 +86,7 @@ do { my $x = {
                                      'Test::More' => '1.001006'
                                    },
                    'requires' => {
+                                   'Consumee::Role' => '0',
                                    'ExtUtils::MakeMaker' => '0',
                                    'File::Spec' => '0',
                                    'Test::Moose' => '0',

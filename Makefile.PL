@@ -31,6 +31,7 @@ my %WriteMakefileArgs = (
     "warnings" => 0
   },
   "TEST_REQUIRES" => {
+    "Consumee::Role" => 0,
     "ExtUtils::MakeMaker" => 0,
     "File::Spec" => 0,
     "Test::Moose" => 0,
@@ -45,6 +46,7 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
+  "Consumee::Role" => 0,
   "ExtUtils::MakeMaker" => 0,
   "File::Spec" => 0,
   "Moose" => "0.94",

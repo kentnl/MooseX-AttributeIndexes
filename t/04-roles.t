@@ -5,7 +5,7 @@ use Test::More;
 
 {
 
-  package Foo::Role;
+  package Consumee::Role;
   use Moose::Role;
   use MooseX::AttributeIndexes;
 
@@ -22,15 +22,15 @@ use Test::More;
   package Foo;
   use Moose;
 
-  with 'Foo::Role';
+  with 'Consumee::Role';
 }
 
 {
 
-  package Bar::Role;
+  package Consumer::Role;
   use Moose::Role;
 
-  with 'Foo::Role';
+  with 'Consumee::Role';
 }
 
 {
@@ -52,7 +52,7 @@ use Test::More;
   package Baz;
   use Moose;
 
-  with 'Foo::Role', 'Empty::Role';
+  with 'Consumee::Role', 'Empty::Role';
 }
 
 is_deeply( Foo->new( bar => "BAR" )->attribute_indexes, { bar => "BAR" }, "application to class works" );
