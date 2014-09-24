@@ -2,14 +2,15 @@ use strict;
 use warnings;
 
 package Moose::Meta::Attribute::Custom::Trait::Indexed;
-BEGIN {
-  $Moose::Meta::Attribute::Custom::Trait::Indexed::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $Moose::Meta::Attribute::Custom::Trait::Indexed::VERSION = '1.0.3';
-}
-
+$Moose::Meta::Attribute::Custom::Trait::Indexed::VERSION = '1.000004';
 # ABSTRACT: Registration Node for the Indexed Trait.
+
+
+
+
+
+
+
 
 
 sub register_implementation {
@@ -22,13 +23,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Moose::Meta::Attribute::Custom::Trait::Indexed - Registration Node for the Indexed Trait.
 
 =head1 VERSION
 
-version 1.0.3
+version 1.000004
 
 =head1 METHODS
 
@@ -52,7 +55,7 @@ Jesse Luehrs <doy@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric.
+This software is copyright (c) 2014 by Kent Fredric.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

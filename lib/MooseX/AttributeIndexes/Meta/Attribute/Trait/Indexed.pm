@@ -2,13 +2,7 @@ use strict;
 use warnings;
 
 package MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed;
-BEGIN {
-  $MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed::VERSION = '1.0.3';
-}
-
+$MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed::VERSION = '1.000004';
 # ABSTRACT: A Trait for attributes which permits various indexing tunables
 
 use Moose::Role;
@@ -17,12 +11,28 @@ use MooseX::Types::Moose 0.19 qw(:all);
 use namespace::autoclean 0.08;
 
 
+
+
+
+
+
+
+
+
+
 has 'indexed' => (
   is       => 'ro',
   isa      => Bool | CodeRef,
   required => 1,
   default  => 0,
 );
+
+
+
+
+
+
+
 
 
 has 'primary_index' => (
@@ -38,13 +48,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed - A Trait for attributes which permits various indexing tunables
 
 =head1 VERSION
 
-version 1.0.3
+version 1.000004
 
 =head1 ATTRIBUTES
 
@@ -76,7 +88,7 @@ Jesse Luehrs <doy@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric.
+This software is copyright (c) 2014 by Kent Fredric.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

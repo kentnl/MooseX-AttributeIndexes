@@ -2,13 +2,7 @@ use strict;
 use warnings;
 
 package MooseX::AttributeIndexes;
-BEGIN {
-  $MooseX::AttributeIndexes::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $MooseX::AttributeIndexes::VERSION = '1.0.3';
-}
-
+$MooseX::AttributeIndexes::VERSION = '1.000004';
 # ABSTRACT: Advertise metadata about your Model-Representing Classes to Any Database tool.
 use Moose 0.94 ();
 
@@ -17,6 +11,81 @@ use Moose::Util::MetaRole;
 use MooseX::AttributeIndexes::Provider;
 use MooseX::AttributeIndexes::Provider::FromAttributes;
 use MooseX::AttributeIndexes::Meta::Attribute::Trait::Indexed;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -43,13 +112,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 MooseX::AttributeIndexes - Advertise metadata about your Model-Representing Classes to Any Database tool.
 
 =head1 VERSION
 
-version 1.0.3
+version 1.000004
 
 =head1 SYNOPSIS
 
@@ -140,7 +211,7 @@ Jesse Luehrs <doy@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric.
+This software is copyright (c) 2014 by Kent Fredric.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
