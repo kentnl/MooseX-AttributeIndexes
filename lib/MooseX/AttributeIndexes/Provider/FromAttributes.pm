@@ -45,7 +45,7 @@ sub attribute_indexes {
       }
       if (  not blessed($indexed)
         and defined reftype($indexed)
-        and reftype($indexed) eq 'CODE' )
+        and 'CODE' eq reftype($indexed) )
       {
         local $_ = $result;
         $result = $attr->$indexed( $self, $result );
