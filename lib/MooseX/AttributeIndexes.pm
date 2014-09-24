@@ -10,7 +10,10 @@ our $VERSION = '2.000000';
 
 # AUTHORITY
 
-use Moose 0.94 ();
+BEGIN {
+  require Moose;
+  Moose->VERSION('0.94');
+}
 
 use Moose::Exporter;
 use Moose::Util::MetaRole;

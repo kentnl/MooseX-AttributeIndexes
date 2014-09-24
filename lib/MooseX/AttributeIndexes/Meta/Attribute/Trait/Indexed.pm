@@ -47,5 +47,7 @@ has 'primary_index' => (
   default  => 0,
 );
 
+no Moose::Role;
+
 1;
 

@@ -41,5 +41,7 @@ for the given object
 
 requires 'attribute_indexes';
 
+no Moose::Role;
+
 1;
 
