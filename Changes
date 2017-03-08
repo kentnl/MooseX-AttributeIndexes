@@ -1,6 +1,14 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+ - Bugfix: Avoid test failures with -Ddefault_inc_excludes_dot
+
+ [Dependencies::Stats]
+ - Dependencies changed since 2.000000, see misc/*.deps* for details
+ - configure: +1 (recommends: ↑1)
+ - develop: +13 ↑4 -3 (recommends: +1, suggests: ↑2)
+ - runtime: (recommends: +1)
+ - test: +1 (recommends: ↑1 ↓1)
 
 2.000000 2014-09-24T05:26:53Z
  [00 Major - Toolkit]
@@ -138,4 +146,3 @@ Revision history for {{$dist->name}}
 
 0.01000300 2009-08-24T12:06:14Z
  - First version.
-

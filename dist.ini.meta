@@ -1,3 +1,4 @@
+; vim: syntax=dosini
 name    = MooseX-AttributeIndexes
 author  = Kent Fredric <kentnl@cpan.org>
 author  = Jesse Luehrs <doy@cpan.org>

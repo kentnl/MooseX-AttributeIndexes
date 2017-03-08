@@ -1,2 +1,3 @@
-MooseX-AttributeIndexes-*
-.build
+/MooseX-AttributeIndexes-*
+/.build
+/tmp/
