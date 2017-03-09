@@ -1,6 +1,6 @@
 Revision history for MooseX-AttributeIndexes
 
-2.000001 2017-03-08T16:19:52Z 4569d1f
+2.000001 2017-03-09T05:13:19Z 1dfa20a
  - Bugfix: Avoid test failures with -Ddefault_inc_excludes_dot
 
  [Dependencies::Stats]
