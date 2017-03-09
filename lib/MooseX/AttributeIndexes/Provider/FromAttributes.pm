@@ -4,7 +4,7 @@ use warnings;
 
 package MooseX::AttributeIndexes::Provider::FromAttributes;
 
-our $VERSION = '2.000001';
+our $VERSION = '2.000002';
 
 # ABSTRACT: A Glue-on-role that provides attribute_indexes data to a class via harvesting attribute traits
 
@@ -74,7 +74,7 @@ MooseX::AttributeIndexes::Provider::FromAttributes - A Glue-on-role that provide
 
 =head1 VERSION
 
-version 2.000001
+version 2.000002
 
 =head1 METHODS
 

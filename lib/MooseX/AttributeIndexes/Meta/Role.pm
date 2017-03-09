@@ -4,7 +4,7 @@ use warnings;
 
 package MooseX::AttributeIndexes::Meta::Role;
 
-our $VERSION = '2.000001';
+our $VERSION = '2.000002';
 
 # ABSTRACT: MetaRole for AttributeIndexes.
 
@@ -32,7 +32,7 @@ MooseX::AttributeIndexes::Meta::Role - MetaRole for AttributeIndexes.
 
 =head1 VERSION
 
-version 2.000001
+version 2.000002
 
 =head1 METHODS
 

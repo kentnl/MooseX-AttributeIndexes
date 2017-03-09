@@ -4,7 +4,7 @@ use warnings;
 
 package MooseX::AttributeIndexes::Meta::Role::Composite;
 
-our $VERSION = '2.000001';
+our $VERSION = '2.000002';
 
 # ABSTRACT: Give a either a class or role indexable attributes.
 
@@ -45,7 +45,7 @@ MooseX::AttributeIndexes::Meta::Role::Composite - Give a either a class or role 
 
 =head1 VERSION
 
-version 2.000001
+version 2.000002
 
 =head1 AUTHORS
 

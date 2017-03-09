@@ -4,7 +4,7 @@ use warnings;
 
 package MooseX::AttributeIndexes::Meta::Role::ApplicationToRole;
 
-our $VERSION = '2.000001';
+our $VERSION = '2.000002';
 
 # ABSTRACT: Give a role indexable attributes
 
@@ -46,7 +46,7 @@ MooseX::AttributeIndexes::Meta::Role::ApplicationToRole - Give a role indexable 
 
 =head1 VERSION
 
-version 2.000001
+version 2.000002
 
 =head1 AUTHORS
 

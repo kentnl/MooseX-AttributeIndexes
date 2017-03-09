@@ -4,7 +4,7 @@ use warnings;
 
 package MooseX::AttributeIndexes::Provider;
 
-our $VERSION = '2.000001';
+our $VERSION = '2.000002';
 
 # ABSTRACT: A role that advertises an object is capable of providing metadata.
 
@@ -31,7 +31,7 @@ MooseX::AttributeIndexes::Provider - A role that advertises an object is capable
 
 =head1 VERSION
 
-version 2.000001
+version 2.000002
 
 =head1 SYNOPSIS
 

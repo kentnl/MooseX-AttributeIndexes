@@ -4,7 +4,7 @@ use warnings;
 
 package Moose::Meta::Attribute::Custom::Trait::Indexed;
 
-our $VERSION = '2.000001';
+our $VERSION = '2.000002';
 
 # ABSTRACT: Registration Node for the Indexed Trait.
 
@@ -28,7 +28,7 @@ Moose::Meta::Attribute::Custom::Trait::Indexed - Registration Node for the Index
 
 =head1 VERSION
 
-version 2.000001
+version 2.000002
 
 =head1 METHODS
 
