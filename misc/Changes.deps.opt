@@ -1,6 +1,8 @@
 This file contains changes in OPTIONAL dependencies for standard CPAN phases (configure/build/runtime/test)
 
-2.000001
+2.000002
+
+2.000001 2017-03-09T05:26:26Z
  [Added / runtime recommends]
  - Moose 2.000
 
