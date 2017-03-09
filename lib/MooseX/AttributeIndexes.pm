@@ -1,3 +1,4 @@
+## no critic (Moose::RequireMakeImmutable)
 use 5.006;    # our, pragmas
 use strict;
 use warnings;
