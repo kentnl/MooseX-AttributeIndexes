@@ -4,7 +4,7 @@ use warnings;
 
 package MooseX::AttributeIndexes::Meta::Role;
 
-our $VERSION = '2.000000';
+our $VERSION = '2.000001';
 
 # ABSTRACT: MetaRole for AttributeIndexes.
 
@@ -32,7 +32,7 @@ MooseX::AttributeIndexes::Meta::Role - MetaRole for AttributeIndexes.
 
 =head1 VERSION
 
-version 2.000000
+version 2.000001
 
 =head1 METHODS
 
@@ -56,7 +56,7 @@ Jesse Luehrs <doy@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Kent Fredric <kentfredric@gmail.com>.
+This software is copyright (c) 2017 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

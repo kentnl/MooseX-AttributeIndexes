@@ -4,7 +4,7 @@ use warnings;
 
 package MooseX::AttributeIndexes::Meta::Role::ApplicationToRole;
 
-our $VERSION = '2.000000';
+our $VERSION = '2.000001';
 
 # ABSTRACT: Give a role indexable attributes
 
@@ -46,7 +46,7 @@ MooseX::AttributeIndexes::Meta::Role::ApplicationToRole - Give a role indexable 
 
 =head1 VERSION
 
-version 2.000000
+version 2.000001
 
 =head1 AUTHORS
 
@@ -64,7 +64,7 @@ Jesse Luehrs <doy@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Kent Fredric <kentfredric@gmail.com>.
+This software is copyright (c) 2017 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

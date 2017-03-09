@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 use strict;
 use warnings;
-use Test::More;
+use Test::More tests => 3;
 
 {
 
@@ -58,5 +58,3 @@ use Test::More;
 is_deeply( Consumee->new( bar => "BAR" )->attribute_indexes, { bar => "BAR" }, "application to class works" );
 is_deeply( Consumer->new( bar => "BAR" )->attribute_indexes, { bar => "BAR" }, "application to role works" );
 is_deeply( Baz->new( bar => "BAR" )->attribute_indexes, { bar => "BAR" }, "role composition works" );
-
-done_testing;
